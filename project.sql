@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 14, 2020 at 03:13 PM
+-- Generation Time: Apr 15, 2020 at 02:24 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -50,7 +50,17 @@ INSERT INTO `customers` (`CustomerID`, `CustomerName`, `Gender`, `CustomerType`,
 (1117, 'bunny', 'F', 'Member', '0937895432'),
 (1118, 'buddy', 'M', 'VIP', '0828905643'),
 (1119, 'run', 'F', 'Member', '0869024321'),
-(1120, 'vanny', 'F', 'Other', '0954958900');
+(1120, 'vanny', 'F', 'Other', '0954958900'),
+(1121, 'king', 'F', 'Member', '0999999991'),
+(1122, 'ning', 'F', 'VIP', '0999999992'),
+(1123, 'may', 'F', 'Other', '0999999993'),
+(1124, 'ly', 'F', 'VIP', '0999999994'),
+(1125, 'candy', 'F', 'VIP', '0999999995'),
+(1126, 'fah', 'F', 'Member', '0999999996'),
+(1127, 'city', 'M', 'Other', '0999999997'),
+(1128, 'bag', 'M', 'Member', '0999999998'),
+(1129, 'molee', 'F', 'Member', '0999999981'),
+(1130, 'one', 'M', 'Other', '0999999982');
 
 -- --------------------------------------------------------
 
@@ -79,7 +89,16 @@ INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `ProductDetail`) VA
 (7, 'fresh milk', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (8, 'thai tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (9, 'lemon tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(10, 'barista', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L');
+(11, 'smoothie', 45, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(12, 'black coffee', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(13, 'iced chocolate', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(14, 'hot chocolate', 35, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(15, 'black tea', 60, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(16, 'fruit tea', 60, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(17, 'herbal tea', 60, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(18, 'milkshake', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(19, 'macchiato', 55, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
+(20, 'orange juice', 45, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L');
 
 -- --------------------------------------------------------
 
@@ -119,7 +138,14 @@ INSERT INTO `sales` (`SaleID`, `SaleDateTime`, `CustomerID`, `StaffID`, `GrandTo
 (17, '2020-04-16 13:00:00', 1118, 9992, 150),
 (18, '2020-04-16 14:00:00', 1113, 9993, 250),
 (19, '2020-04-16 15:00:00', 1116, 9994, 320),
-(20, '2020-04-14 16:00:00', 1111, 9995, 320);
+(20, '2020-04-16 16:00:00', 1111, 9995, 320),
+(21, '2020-04-17 10:05:00', 9996, 1121, 35),
+(22, '2020-04-17 11:00:00', 9997, 1122, 50),
+(23, '2020-04-17 12:03:00', 9998, 1123, 150),
+(24, '2020-04-17 12:18:00', 10000, 1124, 350),
+(25, '2020-04-17 13:06:00', 9991, 1125, 500),
+(26, '2020-04-15 15:09:00', 9992, 1126, 80),
+(27, '2020-04-15 15:52:00', 9999, 1127, 40);
 
 -- --------------------------------------------------------
 
@@ -147,7 +173,6 @@ INSERT INTO `sale_details` (`SaleDetailID`, `SaleID`, `ProductID`, `Price`, `Qua
 (334, 4, 1, 40, 5, 200),
 (335, 5, 5, 50, 10, 500),
 (336, 6, 6, 40, 2, 80),
-(337, 7, 10, 50, 2, 100),
 (338, 8, 9, 40, 5, 200),
 (339, 9, 9, 40, 1, 40),
 (340, 10, 3, 50, 1, 50),
@@ -160,7 +185,13 @@ INSERT INTO `sale_details` (`SaleDetailID`, `SaleID`, `ProductID`, `Price`, `Qua
 (347, 17, 4, 50, 3, 150),
 (348, 18, 2, 50, 5, 250),
 (349, 19, 9, 40, 6, 320),
-(350, 20, 8, 40, 6, 320);
+(350, 20, 8, 40, 6, 320),
+(351, 21, 14, 35, 1, 35),
+(352, 22, 12, 50, 1, 30),
+(354, 24, 12, 50, 7, 350),
+(355, 25, 12, 50, 10, 500),
+(356, 0, 0, 0, 0, 0),
+(357, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -186,7 +217,12 @@ INSERT INTO `staffs` (`StaffID`, `StaffCode`, `StaffName`, `Gender`, `StaffPassw
 (9992, 'non56', 'nonthawut', 'M', '1111', 'Manager'),
 (9993, 'mo13', 'monchanok', 'F', '2222', 'Admin'),
 (9994, 'ii456', 'yuttanun', 'M', '3333', 'Staff'),
-(9995, 'ron890', 'ronnarit', 'M', '4444', 'Staff');
+(9995, 'ron890', 'ronnarit', 'M', '4444', 'Staff'),
+(9996, 'jann12', 'janjaw', 'F', '0987', 'Staff'),
+(9997, 'nuy34', 'panida', 'F', '5678', 'Staff'),
+(9998, 'wi67', 'wiyada', 'F', '5555', 'Staff'),
+(9999, 'nii89', 'veniga', 'F', '6666', 'Staff'),
+(10000, 'yo890', 'yonthida', 'F', '7777', 'Staff');
 
 --
 -- Indexes for dumped tables
@@ -231,7 +267,7 @@ ALTER TABLE `staffs`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1121;
+  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1131;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -243,19 +279,19 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `sale_details`
 --
 ALTER TABLE `sale_details`
-  MODIFY `SaleDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=351;
+  MODIFY `SaleDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=363;
 
 --
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9996;
+  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10001;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

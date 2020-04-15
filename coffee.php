@@ -1,6 +1,5 @@
 <html>
 <head>
-    <title>Page Layout</title>
 <?php
 $dbhost = 'localhost';
 $dbuser = 'coffee';
@@ -13,24 +12,42 @@ if(! $conn ){
 }
 ?>
 
-    <style>
-        .coffee {
-            background-color: #F0E68C;
-            padding: 30px;
-            text-align: center;
-            font-size: 35px;
-            color: white;
-            font-weight:bold;
-        }
+<style>
+input[type="text"]{
+    height:20px;
+    vertical-align:top;
+}
+.field_wrapper div{
+    margin-bottom:10px;
+}
+.add_button{
+    margin-top:10px;
+    margin-left:10px;
+    vertical-align: text-bottom;
+}
+.remove_button{
+    margin-top:10px;
+    margin-left:10px;
+    vertical-align: text-bottom;
+}
+        
+.coffee {
+    background-color: #F0E68C;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-weight:bold;
+}
 
-        .buy {
-            float: left;
-            padding: 20px;
-            width: 70%;
-            background-color: #BDB76B;
-            height: 300px; /* only for demonstration, should be removed */
-        }
-    </style>
+.buy {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #BDB76B;
+    height: 300px;
+}
+</style>
 </head>
 
 
@@ -42,20 +59,49 @@ if(! $conn ){
     </div>
 </header>
 
+<meta charset="utf-8">
+<script src= "http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"> 
+
+$(document).ready(function(){
+    var max = 10;
+    var add = $('.add_button');
+    var wrapper = $('.field_wrapper');
+    var field = '<div> <input type="text" name="buyname[]" placeholder="เครื่องดื่ม"/> <input type="text" name="try[]" placeholder="ความหวาน"/> <input type="text" name="number[]" placeholder="จำนวนเครื่องดื่ม"/> <a class="remove_button"><input type="button" value="remove"/></a></div>';
+    var x = 1;
+
+    $(add).click(function(){
+        if(x < max){
+            $(wrapper).append(field);
+            x++;
+        }
+    });
+    $(wrapper).on('click', '.remove_button', function(e){
+        e.preventDefault();
+        $(this).parent('div').remove();
+        x--;
+    });
+});
+</script>
 
 <section>
-<div class = "buy">
-    <h1>สั่งเครื่องดื่ม</h1>
-        
+<dic class="container">
+    <div class = "buy">
+        <h1>สั่งเครื่องดื่ม</h1>
         <form action="order.php" method="post">
-            ชื่อเครื่องดื่ม:
-        <input type="text" name="buyname" id="buyname" placeholder="เครื่องดื่ม" style="width:150px;" />
-            ชนิด:
-        <input type="text" name="try" id="try" placeholder="ความหวาน" style="width:150px;" />
-            จำนวน:
-        <input type="text" name="number" id="number" placeholder="จำนวนเครื่องดื่ม" style="width:150px;" />
+        <div class="field_wrapper">
+            <div>
+                <input  type="text" name="buyname[]" id="buyname" placeholder="เครื่องดื่ม" />
+                <input  type="text" name="try[]" id="try" placeholder="ความหวาน"/>
+                <input  type="text" name="number[]" id="number" placeholder="จำนวนเครื่องดื่ม" />
+                </div>
+        </div>
+        <input type="submit" name="submit" value="BUY" style="width:100px;height:50px"/>
+        <a class="add_button"><input type="button"value="เพิ่ม" /></a>
         </form>
- </div>   
+    </div>
+ </dic>   
 </section>
+
 </html>
 </body>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 15, 2020 at 01:41 PM
+-- Generation Time: Apr 15, 2020 at 02:24 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -89,7 +89,6 @@ INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `ProductDetail`) VA
 (7, 'fresh milk', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (8, 'thai tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (9, 'lemon tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(10, 'barista', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (11, 'smoothie', 45, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (12, 'black coffee', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
 (13, 'iced chocolate', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
@@ -174,7 +173,6 @@ INSERT INTO `sale_details` (`SaleDetailID`, `SaleID`, `ProductID`, `Price`, `Qua
 (334, 4, 1, 40, 5, 200),
 (335, 5, 5, 50, 10, 500),
 (336, 6, 6, 40, 2, 80),
-(337, 7, 10, 50, 2, 100),
 (338, 8, 9, 40, 5, 200),
 (339, 9, 9, 40, 1, 40),
 (340, 10, 3, 50, 1, 50),
@@ -190,7 +188,6 @@ INSERT INTO `sale_details` (`SaleDetailID`, `SaleID`, `ProductID`, `Price`, `Qua
 (350, 20, 8, 40, 6, 320),
 (351, 21, 14, 35, 1, 35),
 (352, 22, 12, 50, 1, 30),
-(353, 23, 10, 50, 3, 150),
 (354, 24, 12, 50, 7, 350),
 (355, 25, 12, 50, 10, 500),
 (356, 0, 0, 0, 0, 0),

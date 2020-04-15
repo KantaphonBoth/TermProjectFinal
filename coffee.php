@@ -2,9 +2,9 @@
 <head>
 <?php
 $dbhost = 'localhost';
-$dbuser = 'coffee';
+$dbuser = 'project';
 $dbpass = '123456789';
-$dbname = 'coffee';
+$dbname = 'project';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if(! $conn ){
@@ -47,6 +47,13 @@ input[type="text"]{
     background-color: #BDB76B;
     height: 300px;
 }
+
+.menu{
+    background-color:#EEE8AA;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+}
+
 </style>
 </head>
 
@@ -102,6 +109,20 @@ $(document).ready(function(){
     </div>
  </dic>   
 </section>
-
-</html>
+<div class = "menu">
+    <?php
+        $sql = "SELECT ProductID,ProductName FROM products";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()){
+                echo "<br>".$row["ProductID"]."-".$row["ProductName"];
+            }
+        }
+        else{
+            echo "0 results";
+        }
+        $conn->close();
+    ?>
+</div>
 </body>
+</html>

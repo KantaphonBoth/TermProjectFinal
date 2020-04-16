@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <?php
 $dbhost = 'localhost';
@@ -12,61 +13,28 @@ if(! $conn ){
 }
 ?>
 
-<style>
-input[type="text"]{
-    height:20px;
-    vertical-align:top;
-}
-.field_wrapper div{
-    margin-bottom:10px;
-}
-.add_button{
-    margin-top:10px;
-    margin-left:10px;
-    vertical-align: text-bottom;
-}
-.remove_button{
-    margin-top:10px;
-    margin-left:10px;
-    vertical-align: text-bottom;
-}
-        
-.coffee {
-    background-color: #F0E68C;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    font-weight:bold;
-}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>coffee shop</title>
+<link href="https://www.download-free-fonts.com/details/107115/tempus-sans-itc" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 
-.buy {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #BDB76B;
-    height: 300px;
-}
 
-.menu{
-    background-color:#EEE8AA;
-    font-size: 30px;
-    font-family: "Times New Roman", Times, serif;
-}
-
-</style>
 </head>
 
 
 <body>
+    <div class="clearfix"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header_area">
+            <h2>COFFEE Shop</h2>
+            </div>
+        </div>
+    </header>
 
-<header>
-    <div class="coffee">
-    <h2>Coffee Shop</h2>
-    </div>
-</header>
 
-<meta charset="utf-8">
 <script src= "http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript"> 
 
@@ -91,23 +59,23 @@ $(document).ready(function(){
 });
 </script>
 
-<section>
-<dic class="container">
-    <div class = "buy">
-        <h1>สั่งเครื่องดื่ม</h1>
-        <form action="order.php" method="post">
-        <div class="field_wrapper">
-            <div>
+<section class="info1">
+    <dic class="container">
+        <div class="info1_area">
+            <div class="info1_text">
+                <h1>สั่งเครื่องดื่ม</h1>
+            <form action="order.php" method="post">
+                <div class="field_wrapper">
                 <input  type="text" name="buyname[]" id="buyname" placeholder="เครื่องดื่ม" />
                 <input  type="text" name="try[]" id="try" placeholder="ความหวาน"/>
                 <input  type="text" name="number[]" id="number" placeholder="จำนวนเครื่องดื่ม" />
                 </div>
+            <input type="submit" name="submit" value="BUY" style="width:100px;height:50px"/>
+            <a class="add_button"><input type="button"value="เพิ่ม" /></a>
+            </form>
+            </div>
         </div>
-        <input type="submit" name="submit" value="BUY" style="width:100px;height:50px"/>
-        <a class="add_button"><input type="button"value="เพิ่ม" /></a>
-        </form>
-    </div>
- </dic>   
+    </dic>   
 </section>
 <div class = "menu">
     <?php

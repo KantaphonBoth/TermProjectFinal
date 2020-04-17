@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +40,11 @@ if(! $conn ){
 <script type="text/javascript"> 
 
 $(document).ready(function(){
-    var max = 10;
+    var max = 5;
     var add = $('.add_button');
     var wrapper = $('.field_wrapper');
-    var field = '<div> <input type="text" name="buyname[]" placeholder="เครื่องดื่ม"/> <input type="text" name="try[]" placeholder="ความหวาน"/> <input type="text" name="number[]" placeholder="จำนวนเครื่องดื่ม"/> <a class="remove_button"><input type="button" value="remove"/></a></div>';
-    var x = 1;
+    var field = '<div ><input type="text" name="buyname[]" placeholder="เครื่องดื่ม"/><a class="remove_button"><input type="button" value="remove"/></a></div>';
+    var x = 0;
 
     $(add).click(function(){
         if(x < max){
@@ -65,11 +66,10 @@ $(document).ready(function(){
             <div class="info1_text">
                 <h1>สั่งเครื่องดื่ม</h1>
             <form action="order.php" method="post">
+            <br>
                 <div class="field_wrapper">
-                <input  type="text" name="buyname[]" id="buyname" placeholder="เครื่องดื่ม" />
-                <input  type="text" name="try[]" id="try" placeholder="ความหวาน"/>
-                <input  type="text" name="number[]" id="number" placeholder="จำนวนเครื่องดื่ม" />
-                </div>
+                    
+            </div>
             <input type="submit" name="submit" value="BUY" style="width:100px;height:50px"/>
             <a class="add_button"><input type="button"value="เพิ่ม" /></a>
             </form>

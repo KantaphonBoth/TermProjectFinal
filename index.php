@@ -10,16 +10,16 @@
  </head>
  <body>
   <div class="container box">
-   <h3 align="center">How to Get SUM with Datatable Server-side-processing in PHP</h3>
+   <h3 align="center">SALES SUMMARY</h3>
    <br />
    <div class="table-responsive">
     <table id="order_data" class="table table-bordered table-striped">
      <thead>
       <tr>
-       <th>Customer Name</th>
-       <th>Order Item</th>
-       <th>Order Date</th>
-       <th>Order Value</th>
+       <th>SaleDateTime</th>
+       <th>CustomerID</th>
+       <th>StaffID</th>
+       <th>GrandTotal</th>
       </tr>
      </thead>
      <tbody></tbody>

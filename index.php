@@ -54,7 +54,6 @@
      $('#total_order').html(settings.json.total);
     }
    });
-
     
   
  });

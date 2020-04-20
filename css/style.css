@@ -16,7 +16,7 @@ body {
 .menubar {
     width: 100%;
     height: 50px;
-    background: url(../img/1.jpg) no-repeat;
+    background: url(../img/e.jpg) no-repeat;
     box-shadow: 0 0 10px #666; 
     background-position: center center;
     background-size: cover;
@@ -28,7 +28,7 @@ body {
 
 .menubar h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: normal;
     padding: 10px;
     color: #fff;
@@ -83,12 +83,28 @@ body {
     width: 480px;
     font-size: 16px;
 }
-
-
+.info0 {
+    width: 100%;
+    height: 40px;
+    background: rgb(117, 98, 77) url(../img/e.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.info0_text {
+    margin-top: 0px;
+    width: 800px;
+    float: left;
+    color: #fff;
+    margin-left: 0px;
+}
+.info0_area h1 {
+    margin: 0;
+    font-weight: normal;
+}
 .info1 {
     width: 100%;
     height: 700px;
-    background: rgb(117, 98, 77) url(../img/2.jpg) no-repeat;
+    background: rgb(117, 98, 77) url(../img/mn2.png) no-repeat;
     background-position: center center;
     background-size: cover;
 }
@@ -114,7 +130,7 @@ body {
 .info2 {
     width: 100%;
     height: 700px;
-    background: #333 url(../img/mn.png) no-repeat;
+    background: #333 url(../img/e.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
 }
@@ -140,43 +156,6 @@ body {
 }
 
 
-.contact {
-    width: 100%;
-    height: 515px;
-}
-
-.contact_area h1 {
-    font-weight: normal;
-}
-.contact_area input {
-    margin: 10px 0;
-    border: 2px solid #333;
-    width: 350px;
-    padding: 10px;
-}
-
-.contact_area textarea {
-    margin: 10px 0;
-    border: 2px solid #333;
-    width: 350px;
-    padding: 10px;
-}
-
-.contact_area button {
-    padding: 10px;
-    width: 90px;
-    background: #333;
-    color: #fff;
-    border: 2px solid transparent;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-.contact_area button:hover {
-    background: #fff;
-    color: #333;
-    border: 2px solid #333;
-}
 
 footer {
     background: #333;

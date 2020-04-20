@@ -2,17 +2,16 @@
 
 //fetch.php
 
-$connect = new PDO("mysql:host=localhost;dbname=project", "root", "123456789");
+$connect = new PDO("mysql:host=localhost;dbname=project", "root", "Pang0808!!");
 
-$column = array('CustomerID', 'StaffID', 'GrandTotal', 'SaleDateTime');
+$column = array('SaleDateTime', 'CustomerID', 'StaffID', 'GrandTotal');
 
 $query = '
 SELECT * FROM sales 
-WHERE CustomerID LIKE "%'.$_POST["search"]["value"].'%" 
+WHERE SaleDateTime LIKE "%'.$_POST["search"]["value"].'%" 
+OR CustomerID LIKE "%'.$_POST["search"]["value"].'%" 
 OR StaffID LIKE "%'.$_POST["search"]["value"].'%" 
 OR GrandTotal LIKE "%'.$_POST["search"]["value"].'%" 
-OR SaleDateTime LIKE "%'.$_POST["search"]["value"].'%" 
-
 ';
 
 if(isset($_POST["order"]))
@@ -50,10 +49,10 @@ $total_order = 0;
 foreach($result as $row)
 {
  $sub_array = array();
+ $sub_array[] = $row["SaleDateTime"];
  $sub_array[] = $row["CustomerID"];
  $sub_array[] = $row["StaffID"];
  $sub_array[] = $row["GrandTotal"];
- $sub_array[] = $row["SaleDateTime"];
 
  $total_order = $total_order + floatval($row["GrandTotal"]);
  $data[] = $sub_array;

@@ -59,7 +59,7 @@ require 'item.php';
 unset($_SESSION['cart']);
 
 ?>
-Thanks for buying products. Click<a href="int.php">here</a> to continue
+Thanks for buying products. Click<a href="coffee.php">here</a> to continue
 
 <div class="card">
             <div class="card-body">

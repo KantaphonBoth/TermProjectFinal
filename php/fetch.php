@@ -2,7 +2,7 @@
 
 //fetch.php
 
-$connect = new PDO("mysql:host=localhost;dbname=project", "root", "Pang0808!!");
+$connect = new PDO("mysql:host=localhost;dbname=project", "root", "123456789");
 
 $column = array('SaleDateTime', 'CustomerID', 'StaffID', 'GrandTotal');
 

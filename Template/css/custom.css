@@ -1,0 +1,328 @@
+/*
+	Template Name 	: The Coffee Shop Business HTML Template
+	Author 			: Awaiken Theme
+	Author Url 		: https://awaikenthemes.com
+*/
+
+/************************************/
+/***** 	      General css		 ****/
+/************************************/
+
+body{
+	font-family: 'Nunito Sans', sans-serif;
+	color: #adadb5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin-top:0;
+	font-weight: 700;
+}
+
+a{
+	color: var(--main-color);
+}
+
+img{
+	max-width: 100%;
+}
+
+a:hover{
+	text-decoration: none;
+	outline: 0;
+}
+
+a:focus{
+	text-decoration: none;
+	outline: 0;
+}
+
+::-moz-selection{
+	background: #121315;
+	color: #fff;
+}
+
+::selection{
+	background: #121315;
+	color: #fff;
+}
+
+.preloader{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #222;
+	z-index: 9999;
+}
+
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -30px;
+	border: 8px solid #666;
+	border-radius: 50%;
+	border-top: 8px solid #fff;
+	border-bottom: 8px solid #fff;
+	width: 60px;
+	height: 60px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.no-gutter.row,
+.no-gutter.container,
+.no-gutter.container-fluid{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.no-gutter>[class^="col-"]{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-custom{
+	display: inline-block;
+	background: #323232;
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 0.02em;
+	padding: 12px 30px;
+	transition: all 0.4s;
+}
+
+.btn-custom:hover,
+.btn-custom:focus{
+	background: #000;
+	color: #fff;
+}
+
+/************************************/
+/*****    Navigation area css   *****/
+/************************************/
+
+header.header-default{
+	padding-top: 80px;
+}
+
+.main-navigation{
+	background: #fff;
+	padding-bottom: 80px;
+	z-index: 100;
+	min-height: 143px;
+	transition: all 0.4s;
+}
+
+.sticky-header .menu-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	background: #fff;
+	box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.main-navbar.sticky-header{
+	padding: 15px 0;
+}
+
+.navbar{
+	padding: 10px 0;
+	transition: all 0.4s;
+}
+
+.navbar-expand-md .navbar-nav .nav-link{
+	color: #adadb5;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: all 0.3s;
+}
+
+
+.navbar-expand-md .navbar-nav .nav-link:hover{
+	color: #323232;
+}
+
+.navbar-toggle{
+	display: none;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+
+#responsive-menu{
+	display: none;
+}
+
+.logo{
+	text-align: center;
+	margin-bottom: 20px;
+	position: center;
+	transition: all 0.4s;
+
+}
+
+.navbar-brand{
+	margin-right: 0;
+}
+
+.navbar-brand img{
+	height: 100px;
+	transition: all 0.4s;
+
+}
+
+.main-navbar.sticky-header .logo{
+	margin-bottom: 6px;
+}
+
+.main-navbar.sticky-header .navbar-brand img{
+	height: 40px; 
+}
+
+.navbar-brand{
+	padding: 0;
+}
+
+.navbar-toggle{
+	position: relative;
+}
+
+.slicknav_menu{
+	padding: 0;
+	background: none;
+}
+
+.slicknav_nav a{
+	color: #323232;
+	padding: 6px 0;
+	margin: 0;
+}
+
+.slicknav_nav a:hover{
+	background: none;
+}
+
+
+.slicknav_btn{
+	background: none;
+	margin: 0;
+	border-radius: 0;
+	border: 1px solid #323232;
+}
+
+.slicknav_icon-bar{
+	box-shadow: none;
+	background: #323232;
+	height: 1px;
+	margin-top: 3px;
+}
+
+.navbar-toggle > span{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #323232;
+	padding: 3px 0;
+}
+
+/************************************/
+/***** 	    Home Slider css		 ****/
+/************************************/
+
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.home-slide{
+	min-height: 460px;
+	position: relative;
+	background-position: center center;
+	background-size: cover;
+}
+
+.home-slide:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(50,50,50,0.30);
+}
+
+.home-slide-content{
+	text-align: center;
+	position: absolute;
+	width: 90%;
+	max-width: 560px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.home-slide-content h3{
+	font-size: 18px;
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 30px;
+	font-family: 'Playfair Display', serif;
+}
+
+.home-slide-content h2{
+	font-size: 30px;
+	color: #fff;
+	font-weight: 700;
+	font-family: 'Playfair Display', serif;
+}
+
+.home-slider-prev,
+.home-slider-next{
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	font-size: 40px;
+	color: #fff;
+	z-index: 10;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.home-slider-prev{
+	left: 30px;
+}
+
+.home-slider-next{
+	right: 30px;
+}
+
+/************************************/
+/***** 	  About us Section css   ****/
+/************************************/
+

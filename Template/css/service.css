@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+footer {
+    background: #333;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+footer p {
+    margin: 0;
+}

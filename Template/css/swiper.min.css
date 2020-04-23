@@ -18,14 +18,14 @@ body {
 .info0 {
     width: 100%;
     height: 50px;
-    background: rgb(117, 98, 77) ;
+    background: #fff;
    
 }
 .info0_text {
     margin-top: 0px;
     width: 800px;
     float: left;
-    color: #fff;
+    color: #666;
     margin-left: 0px;
     
 }

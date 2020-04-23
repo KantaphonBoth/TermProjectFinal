@@ -72,8 +72,9 @@
         {?>
         <div class="col-md-4">
             <form method="post" action="myorder.php?ProductID=<?php echo $product->ProductID; ?>&action=add">
-                <div style="border:5px solid #333; background-color:#f1f1f1; border-radius:25px; padding:50px;" align="center">
+                <div style="border:25px solid #333; background-color:#f1f1f1; border-radius:25px; padding:50px;" align="center">
                     <h6><?php echo $product->ProductID; ?></h6>
+                    <img src="menu/<?php echo $product->image;?>" class="img-responsive" style="width:300px;height:300px;" /><br />
                     <h4><?php echo $product->ProductName; ?></h4>
                     <h4><?php echo $product->Price; ?></h4>
                     <input type="submit" value="Buy" style="margin-top:5px;" class="btn btn-success"></input>

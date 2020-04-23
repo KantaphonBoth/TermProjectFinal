@@ -2,16 +2,16 @@
 
 //fetch.php
 
-$connect = new PDO("mysql:host=localhost;dbname=project", "root", "123456789");
+$connect = new PDO("mysql:host=localhost;dbname=test", "root", "123456789");
 
 $column = array('SaleDateTime', 'CustomerID', 'StaffID', 'GrandTotal');
 
 $query = '
 SELECT * FROM sales 
-WHERE SaleDateTime LIKE "%'.$_POST["search"]["value"].'%" 
-OR CustomerID LIKE "%'.$_POST["search"]["value"].'%" 
-OR StaffID LIKE "%'.$_POST["search"]["value"].'%" 
-OR GrandTotal LIKE "%'.$_POST["search"]["value"].'%" 
+WHERE SaleID LIKE "%'.$_POST["search"]["value"].'%" 
+OR CustomerName LIKE "%'.$_POST["search"]["value"].'%" 
+OR SaleDateTime LIKE "%'.$_POST["search"]["value"].'%" 
+OR Total LIKE "%'.$_POST["search"]["value"].'%" 
 ';
 
 if(isset($_POST["order"]))
@@ -49,12 +49,12 @@ $total_order = 0;
 foreach($result as $row)
 {
  $sub_array = array();
+ $sub_array[] = $row["SaleID"];
  $sub_array[] = $row["SaleDateTime"];
- $sub_array[] = $row["CustomerID"];
- $sub_array[] = $row["StaffID"];
- $sub_array[] = $row["GrandTotal"];
-
- $total_order = $total_order + floatval($row["GrandTotal"]);
+ $sub_array[] = $row["CustomerName"];
+ $sub_array[] = $row["Total"];
+ $sub_array[] = '<button type="button" name="view" id="'.$row["SaleID"].'" class="btn btn-primary btn-xs view">View</button>';
+ $total_order = $total_order + floatval($row["Total"]);
  $data[] = $sub_array;
 }
 

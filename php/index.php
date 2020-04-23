@@ -6,7 +6,8 @@
  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- </head>
+ <script src="https://www.jqueryscript.net/demo/Dialog-Modal-Dialogify/dist/dialogify.min.js"></script> 
+</head>
  <body>
  <meta http-equiv="Content-Type" content="Text/html; charset=tis-620">
  <title></title>
@@ -67,17 +68,18 @@
     <table id="order_data" class="table table-bordered ">
      <thead>
       <tr bgcolor="#363636" >
+       <th>SaleID</th>
        <th>SaleDateTime</th>
-       <th>CustomerID</th>
-       <th>StaffID</th>
-       <th>GrandTotal</th>
+       <th>CustomerName</th>
+       <th>Total</th>
+       <td>View</td>
       </tr>
      </thead>
      <tbody></tbody>
      <tfoot id="t01">
       <tr>
        <th colspan="3">Total</th>
-       <th id="total_order"></th>
+       <th colspan="2" id="total_order"></th>
       </tr>
      </tfoot>
     </table>
@@ -106,7 +108,22 @@
     }
    });
     
-  
+   $(document).on('click', '.view', function(){
+  var id = $(this).attr('id');
+  var options = {
+   ajaxPrefix: '',
+   ajaxData: {id:id},
+   ajaxComplete:function(){
+    this.buttons([{
+     type: Dialogify.BUTTON_PRIMARY
+    }]);
+   }
+  };
+  new Dialogify('fetch_single.php', options)
+   .title('View Employee Details')
+   .showModal();
+ });
+
  });
  
 </script>

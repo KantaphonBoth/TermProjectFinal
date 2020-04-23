@@ -10,10 +10,17 @@
     <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css3/myorder.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     
 </head>
 <body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
     <div class="menubars">
         <div class="container">
@@ -44,7 +51,7 @@
     </section>        
                 
 
-    <div id="coffeeaddmodal" class="col-sm-6" >
+    <div id="coffeeaddmodal"  >
         <h5 style="text-align:center;">Add Coffee</h5>
             <form action="insertcode.php" method="POST">
                 
@@ -67,6 +74,7 @@
                         $product = mysqli_fetch_object($sql_run);
                         $item = new Item();
                         $item->ProductID = $product->ProductID;
+                        $item->image = $product->image;
                         $item->ProductName = $product->ProductName;
                         $item->Price = $product->Price;
                         $item->quantity = 1;
@@ -119,16 +127,17 @@
                         }
                     }
                     ?>
-                    <table cellpadding="2" cellspacing="2" border="1"  align="center">
+                    <table class="table" cellpadding="2" cellspacing="2" border="1"  align="center">
                         <tr>
-                            <th>option</th>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Quantity <input type="submit" value="Save" />
+                            <th class="table-primary">option</th>
+                            <th class="table-primary">Id</th>
+                            <th class="table-primary">image</th>
+                            <th class="table-primary">Name</th>
+                            <th class="table-primary">Price</th>
+                            <th class="table-primary">Quantity <input type="submit" value="Save" />
                                 <input type="hidden" name="saveupdate"/>
                             </th>
-                            <th>Sub Total</th>
+                            <th class="table-warning" >Sub Total</th>
                         </tr>
 
                         <?php
@@ -144,6 +153,7 @@
                             <td><a href="myorder.php?index=<?php echo $index; ?>"
                                 onclick="return confirm('Are you sure?')">Delete</a></td>
                             <td><?php echo $cart[$i]->ProductID; ?></td>
+                            <td><img src="menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></td>
                             <td><?php echo $cart[$i]->ProductName; ?></td>
                             <td><?php echo $cart[$i]->Price; ?></td>
                             <td><input type="number" value="<?php echo $cart[$i]->quantity; ?>" 
@@ -155,32 +165,32 @@
                         }
                         ?>
                         <tr>
-                            <td colspan="5" align="right">sum</td>
+                            <td colspan="6" align="center">sum</td>
                             <td align="left"><?php echo $_SESSION['total']; ?></td>
                         </tr>
                     </table>
                     <br>
                     <!-- <a href="int.php">Continue Shopping</a> | <a href="checkout.php">Checkout</a> -->
                 </div>
-                <div>
+                <div align="center">
                     <div>
                         <labal>customers Name</labal>
-                        <input type="text" name="CustomerName" class="form-control" placeholder="ชื่อลูกค้า"><br> 
+                        <input type="text" name="CustomerName" placeholder="ชื่อลูกค้า"><br> 
                     </div>
                     <div>
                         <labal>My Phon</labal>
-                        <input type="text" name="Phonnumber" class="form-control" placeholder="เบอร์โทรลูกค้า"><br> 
+                        <input type="text" name="Phonnumber" placeholder="เบอร์โทรลูกค้า"><br> 
                     </div>
                     <div>
                         <labal> DateTime</labal>
-                        <input type="datetime-local" id="send" class="form-control" oninput="SaleDateTime.value = send.value">
-                        <input type="text" name="SaleDateTime" class="form-control" id="SaleDateTime" placeholder="วันที่สั่ง">
+                        <input type="datetime-local" id="send"  oninput="SaleDateTime.value = send.value">
+                        <input type="text" name="SaleDateTime"  id="SaleDateTime" placeholder="วันที่สั่ง">
                     </div>
                     
                 </div>
 
                 <br>
-            <div>
+            <div align="center">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" name="insertdata" class="btn btn-primary">Coffee BUY</button>
             </div>

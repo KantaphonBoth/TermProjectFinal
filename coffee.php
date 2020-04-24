@@ -23,7 +23,7 @@
 	<!-- Main custom css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
     <link href="css/responsive.css" rel="stylesheet" media="screen">
-    <link href="css/style.css" rel="stylesheet"  media="screen">
+    
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,13 +35,19 @@
 </head>
 
 <body data-spy="scroll" data-target="#navigation" data-offset="63">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-	<!-- Preloader Starts -->
+	<!-- Jquery Library File -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- Bootstrap js file -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Swiper Carousel js file -->
+	<script src="js/swiper.min.js"></script>
+	<!-- SlickNav js file -->
+	<script src="js/jquery.slicknav.js"></script>
+	<!-- Smooth Scroll js file -->
+	<script src="js/SmoothScroll.js"></script>
+    <script src="js/function.js"></script>
+    
+    <!-- Preloader Starts -->
 	<div class="preloader">
 		<div class="loader"></div>
 	</div>
@@ -72,9 +78,8 @@
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
 							<ul class="navbar-nav mx-auto" id="main-menu">
 								<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="#menu">Menu</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="#Add">Add Coffee</a></li>
-								<li class="nav-item"><a class="nav-link " href="carts.php">cart</a></li>
+								<li class="nav-item"><a class="nav-link active" href="#menu">Menu</a></li>
+								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
 								<li class="nav-item"><a class="nav-link" href="myorder.html">My Oder</a></li>
 							
 							</ul>	
@@ -151,17 +156,7 @@
 	</div>
 	<!-- Home Slider Section Ends -->
 	
-	<!-- Jquery Library File -->
-	<script src="js/jquery-1.12.4.min.js"></script>
-	<!-- Bootstrap js file -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Swiper Carousel js file -->
-	<script src="js/swiper.min.js"></script>
-	<!-- SlickNav js file -->
-	<script src="js/jquery.slicknav.js"></script>
-	<!-- Smooth Scroll js file -->
-	<script src="js/SmoothScroll.js"></script>
-	<script src="js/function.js"></script>
+	
 	<section class="info0" id="menu">
         <div class="container">
             <div class="info0_area">
@@ -187,9 +182,9 @@
     </section>
 
     <section style="background-image: url(img/e.jpg)">
-            <div id="Add">
+            <div>
     <br>
-        <h5 style="text-align:center;">Cart Coffee</h5>
+        <h5 style="text-align:center;">Add Coffee</h5>
 
 </div>
     <div class="row">
@@ -222,7 +217,9 @@
             
     </div>
     </section>
-	<footer >
+
+
+	<footer>
         <p>Coffee Shop &copy;  | CPE04 Group2 </p>
     </footer>
 </body>

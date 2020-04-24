@@ -14,7 +14,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <div align="center">
-    Thanks for buying products. Click<a href="int.php">here</a> to continue,SubTotal<?php echo $_SESSION['total'];?>
+    Thanks for buying products. Click<a href="myorder.php">here</a> to continue,SubTotal<?php echo $_SESSION['total'];?>
 </div>
 
 <?php
@@ -26,7 +26,7 @@ $dbpass = '123456789';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 $db = mysqli_select_db($conn, 'test');
 require 'item.php';
-
+    
     if(isset($_POST['insertdata']))
     {
         session_start();
@@ -90,47 +90,7 @@ require 'item.php';
 ?>
 
 
-
-
-
-
-<script>
-$(document).ready(function() {
-    $('.editbtn').on('click', function() {
-        $('#editmodal').modal('show');
-
-        $tr = $(this).closest('tr');
-
-        var data = $tr.children("td").map(function(){
-            return $(this).text();
-        }).get();
-
-        console.log(data);
-
-        $('#update_id').val(data[0]);
-        $('#SaleDateTime').val(data[1]);
-        $('#CustomerName').val(data[2]);
-    });
-});
-</script>
-<script>
-$(document).ready(function() {
-    $('.deletebtn').on('click', function() {
-        $('#deletemodal').modal('show');
-            
-            $tr = $(this).closest('tr');
-
-            var data = $tr.children("td").map(function(){
-                return $(this).text();
-            }).get();
-
-            console.log(data);
-
-            $('#delete_id').val(data[0]);
-    });
-});
-</script>
-<a href="index.php">Continue Shopping</a> | <a href="int.php">Checkout</a>
+<a href="index.php">Continue Shopping</a> | <a href="coffee.php">Checkout</a>
 </body>
 
 </html>

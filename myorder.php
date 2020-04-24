@@ -9,8 +9,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />     
     <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css3/myorder.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
 	<!-- Bootstrap css -->
 	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
@@ -30,21 +29,17 @@
 </head>
 <body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
 <script src="js/jquery-1.12.4.min.js"></script>
 	<!-- Bootstrap js file -->
-	<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 	<!-- Swiper Carousel js file -->
-	<script src="js/swiper.min.js"></script>
-	<!-- SlickNav js file -->
-	<script src="js/jquery.slicknav.js"></script>
+<script src="js/swiper.min.js"></script>
+    <!-- SlickNav js file -->
+<script src="js/jquery.slicknav.js"></script>
 	<!-- Smooth Scroll js file -->
-	<script src="js/SmoothScroll.js"></script>
-    <script src="js/function.js"></script>
+<script src="js/SmoothScroll.js"></script>
+<script src="js/function.js"></script>
     
     <!-- <div class="menubars">
         <div class="container">
@@ -99,6 +94,63 @@
 							<div class="navbar-toggle"><span>Menu</span></div>
 							<div id="responsive-menu"></div>
 						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <div class="home-slider-section" id="home">
+		<div class="container-fluid">
+			<div class="row no-gutter">
+				<div class="col-md-12">
+					<div class="swiper-container home-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/55.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+							
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/56.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/57.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/59.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="home-slider-prev"><i class="fa fa-angle-left"></i></div>
+						<div class="home-slider-next"><i class="fa fa-angle-right"></i></div>
 					</div>
 				</div>
 			</div>

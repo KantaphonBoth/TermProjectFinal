@@ -80,7 +80,7 @@
 								<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
 								<li class="nav-item"><a class="nav-link active" href="#menu">Menu</a></li>
 								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
-								<li class="nav-item"><a class="nav-link" href="myorder.html">My Oder</a></li>
+								<li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
 							
 							</ul>	
 							<div class="navbar-toggle"><span>Menu</span></div>
@@ -181,42 +181,6 @@
         </div>
     </section>
 
-    <section style="background-image: url(img/e.jpg)">
-            <div>
-    <br>
-        <h5 style="text-align:center;">Add Coffee</h5>
-
-</div>
-    <div class="row">
-        <?php
-
-        $dbhost = 'localhost';
-        $dbuser = 'test';
-        $dbpass = '123456789';
-        $dbname = 'test';
-        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-        $sql = "SELECT * FROM products";
-        $sql_run = mysqli_query($conn, $sql);
-        
-        while($product = mysqli_fetch_object($sql_run)) 
-        {?>
-        <div class="col-md-4">
-            <form method="post" action="myorder.php?ProductID=<?php echo $product->ProductID; ?>&action=add">
-                <div style="border:25px solid #333; background-color:#f1f1f1; border-radius:25px; padding:50px;" align="center">
-                    <h6><?php echo $product->ProductID; ?></h6>
-                    <img src="menu/<?php echo $product->image;?>" class="img-responsive" style="width:300px;height:300px;" /><br />
-                    <h4><?php echo $product->ProductName; ?></h4>
-                    <h4><?php echo $product->Price; ?></h4>
-                    <input type="submit" value="Buy" style="margin-top:5px;" class="btn btn-success"></input>
-                </div>
-                <br>
-            </form>
-        </div>
-            <?php } ?>
-            
-    </div>
-    </section>
 
 
 	<footer>

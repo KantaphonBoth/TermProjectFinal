@@ -33,7 +33,25 @@
 			return false;
 		}
 	});
+
 	
+	
+	$(document).on('click', '.view', function(){
+		var id = $(this).attr('id');
+		var options = {
+		 ajaxPrefix: '',
+		 ajaxData: {id:id},
+		 ajaxComplete:function(){
+		  this.buttons([{
+		   type: Dialogify.BUTTON_PRIMARY
+		  }]);
+		 }
+		};
+		new Dialogify('fetch_single.php', options)
+		 .title('View Employee Details')
+		 .showModal();
+	   });
+
 	/* Scroll to anchor when calling URL */
 	$(document).ready(function() {
 		var elem = window.location.hash.replace('#', '');
@@ -45,6 +63,23 @@
 		}
 	});
 	
+	$(document).ready(function(){
+  
+		var dataTable = $('#order_data').DataTable({
+		 "processing" : true,
+		 "serverSide" : true,
+		 "order" : [],
+		 "ajax" : {
+		  url:"fetch.php",
+		  type:"POST"
+		 },
+		 drawCallback:function(settings)
+		 {
+		  $('#total_order').html(settings.json.total);
+		 }
+		});
+	 
+	  });
 	/* slick nav */
 	$('#main-menu').slicknav({prependTo:'#responsive-menu',label:'', closeOnClick:true});
 	

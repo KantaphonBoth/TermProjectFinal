@@ -1,16 +1,25 @@
 <html>
  <title>Sales summary</title>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
- <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- <script src="https://www.jqueryscript.net/demo/Dialog-Modal-Dialogify/dist/dialogify.min.js"></script> 
+ <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<!-- Bootstrap css -->
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome Icon font css -->
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<!-- Flaticon Icon font css -->
+	<link href="css/flaticon.css" rel="stylesheet">
+	<!-- Swiper's CSS -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<!-- SlickNav Menu css -->
+	<link href="css/slicknav.css" rel="stylesheet" media="screen">
+	<!-- Main custom css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <link href="css/responsive.css" rel="stylesheet" media="screen">
 </head>
  <body>
- <meta http-equiv="Content-Type" content="Text/html; charset=tis-620">
- <title></title>
  <style type="text/css">
  @font-face {
         font-family :Bangnampueng;
@@ -19,7 +28,7 @@
  body {
    
         font-family :'Bangnampueng', sans-serif ;
-        background-image :url('images/oo.jpg');
+        background-image :url('images/images/oo.jpg');
         color : white ;
         background-color : white ;
         background-repeat: no-repeat;
@@ -61,6 +70,12 @@
   }
 
   </style>
+
+<div class="preloader">
+		<div class="loader"></div>
+      </div>
+      
+      
   <div class="container box">
    <h3>SALES SUMMARY</h3>
    <br />
@@ -88,8 +103,18 @@
     <br />
    </div>
   </div>
- </body>
-</html>
+ 
+<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- Bootstrap js file -->
+<script src="js/bootstrap.min.js"></script>
+	<!-- Swiper Carousel js file -->
+<script src="js/swiper.min.js"></script>
+	<!-- SlickNav js file -->
+<script src="js/jquery.slicknav.js"></script>
+	<!-- Smooth Scroll js file -->
+<script src="js/SmoothScroll.js"></script>
+<script src="function.js"></script>
+
 
 <script type="text/javascript" language="javascript" >
  $(document).ready(function(){
@@ -127,3 +152,6 @@
  });
  
 </script>
+
+</body>
+</html>

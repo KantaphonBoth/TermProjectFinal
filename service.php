@@ -9,8 +9,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />     
     <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css3/myorder.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
 	<!-- Bootstrap css -->
 	<link href="css/bootstrap.css" rel="stylesheet" media="screen">

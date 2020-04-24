@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit;
+  color: black;
 }
 
 h1, .h1 {
@@ -385,7 +385,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 5.5rem;
 }
 
 h6, .h6 {

@@ -1,25 +1,16 @@
 <html>
  <title>Sales summary</title>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-	<!-- Bootstrap css -->
-	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-	<!-- Font Awesome Icon font css -->
-	<link href="css/fontawesome-all.css" rel="stylesheet">
-	<!-- Flaticon Icon font css -->
-	<link href="css/flaticon.css" rel="stylesheet">
-	<!-- Swiper's CSS -->
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<!-- SlickNav Menu css -->
-	<link href="css/slicknav.css" rel="stylesheet" media="screen">
-	<!-- Main custom css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
-    <link href="css/responsive.css" rel="stylesheet" media="screen">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <script src="https://www.jqueryscript.net/demo/Dialog-Modal-Dialogify/dist/dialogify.min.js"></script> 
 </head>
  <body>
+ <meta http-equiv="Content-Type" content="Text/html; charset=tis-620">
+ <title></title>
  <style type="text/css">
  @font-face {
         font-family :Bangnampueng;
@@ -104,54 +95,7 @@
    </div>
   </div>
  
-<script src="js/jquery-1.12.4.min.js"></script>
-	<!-- Bootstrap js file -->
-<script src="js/bootstrap.min.js"></script>
-	<!-- Swiper Carousel js file -->
-<script src="js/swiper.min.js"></script>
-	<!-- SlickNav js file -->
-<script src="js/jquery.slicknav.js"></script>
-	<!-- Smooth Scroll js file -->
-<script src="js/SmoothScroll.js"></script>
-<script src="function.js"></script>
-
-
-<script type="text/javascript" language="javascript" >
- $(document).ready(function(){
-  
-   var dataTable = $('#order_data').DataTable({
-    "processing" : true,
-    "serverSide" : true,
-    "order" : [],
-    "ajax" : {
-     url:"fetch.php",
-     type:"POST"
-    },
-    drawCallback:function(settings)
-    {
-     $('#total_order').html(settings.json.total);
-    }
-   });
-    
-   $(document).on('click', '.view', function(){
-  var id = $(this).attr('id');
-  var options = {
-   ajaxPrefix: '',
-   ajaxData: {id:id},
-   ajaxComplete:function(){
-    this.buttons([{
-     type: Dialogify.BUTTON_PRIMARY
-    }]);
-   }
-  };
-  new Dialogify('fetch_single.php', options)
-   .title('View Employee Details')
-   .showModal();
- });
-
- });
- 
-</script>
+  <script src="function.js"></script>
 
 </body>
 </html>

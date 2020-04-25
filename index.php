@@ -9,7 +9,7 @@
  <script src="https://www.jqueryscript.net/demo/Dialog-Modal-Dialogify/dist/dialogify.min.js"></script>
  <link href="css/sales.css" rel="stylesheet" media="screen">
  <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
- 
+ <link href="css/swiper.min.css" rel="stylesheet" >
 </head>
  <body>
  <meta http-equiv="Content-Type" content="Text/html; charset=tis-620">

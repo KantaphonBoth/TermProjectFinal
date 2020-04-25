@@ -322,6 +322,32 @@ header.header-default{
 	right: 30px;
 }
 
+.info1 {
+    width: 100%;
+    height: 700px;
+    background: rgb(117, 98, 77) url(../img/mn2.png);
+    background-position: center center;
+    background-size: cover;
+}
+.info1_area {
+    color: rgb(53, 43, 31);  
+}
+.info1_area img {
+    margin-top: 80px;
+    float: left;
+}
+.info1_text {
+    width: 800px;
+    float: left;
+    margin-right: 0px;
+    margin-top: 140px;
+    color: #fff;
+}
+.info1_area h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
 /************************************/
 /***** 	  About us Section css   ****/
 /************************************/

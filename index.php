@@ -22,8 +22,8 @@
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
 							<ul class="navbar-nav" id="main-menu">
-								<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-								<li class="nav-item"><a class="nav-link active" href="#menu">Menu</a></li>
+								<li class="nav-item"><a class="nav-link active" href="coffee.php">Home</a></li>
+								<li class="nav-item"><a class="nav-link active" href="coffee.php">Menu</a></li>
 								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
 								<li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
 							

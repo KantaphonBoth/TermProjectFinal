@@ -1,0 +1,153 @@
+@font-face {
+    font-family :Bangnampueng;
+    src :url('../Bangnampueng.ttf')format("truetype");
+}
+body {
+
+    /* font-family :'Bangnampueng', sans-serif ; */
+    background-image :url('../images/images/oo.jpg');
+    color : white ;
+    background-color : white ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -o-background-size: 100% 100%, auto;
+    -moz-background-size: 100% 100%, auto;
+    -webkit-background-size: 100% 100%, auto;
+    background-size: 100% 100%, auto;        
+}
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+h3 {
+    
+    color: white ;
+    font-size:50px;
+}
+tr {
+    text-align: center;
+    color: #000000 ;
+    font-size:30px;
+    background-color: #AAA8A4
+
+}
+
+th {
+  text-align: center;
+  background-color: #363636;
+  color: white;
+}
+
+tfoot#t01 th {
+  text-align: center;
+  background-color: #998357;
+  color: black;
+}
+
+header.header-default{
+	padding-top: 80px;
+}
+
+.main-navigation{
+	background-image :url('../images/images/oo.jpg');
+	padding-bottom: 0px;
+	z-index: 100;
+	min-height: 0px;
+	transition: all 0.4s;
+}
+
+.sticky-header .menu-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background: #fff;
+	box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.main-navbar.sticky-header{
+	padding: 20px 0;
+}
+
+.no-gutter.row,
+.no-gutter.container,
+.no-gutter.container-fluid{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .navbar{
+	padding: 10px 50;
+	transition: all 0.4s;
+}
+
+.navbar-expand-md .navbar-nav .nav-link{
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 20px;
+	padding-right: 160px;
+	transition: all 0.3s;
+}
+
+
+.navbar-expand-md .navbar-nav .nav-link:hover{
+	color: #323232;
+}
+
+.navbar-toggle{
+	display: none;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+
+.navbar-brand{
+	margin-right: 0;
+}
+
+.navbar-brand img{
+	height: 100px;
+	transition: all 0.4s;
+
+}
+
+.main-navbar.sticky-header .logo{
+	margin-bottom: 6px;
+}
+
+.main-navbar.sticky-header .navbar-brand img{
+	height: 40px; 
+}
+
+.navbar-brand{
+	padding: 0;
+}
+
+.navbar-toggle{
+	position: relative;
+}
+  
+
+.navbar-toggle > span{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #323232;
+	padding: 3px 0;
+}

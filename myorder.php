@@ -217,8 +217,8 @@
 
                 <br>
             <div align="center">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" name="insertdata" class="btn btn-primary">Coffee BUY</button>
+                
+                <button type="submit" name="insertdata" class="btn btn-primary">Confirmed</button>
             </div>
             </form>
 </div>

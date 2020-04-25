@@ -39,25 +39,9 @@ require 'item.php';
         $sql = "INSERT INTO sales (CustomerName,phonNo,SaleDateTime,Total) VALUES ('$CusName','$ph','$date',$s)";
         mysqli_query($conn, $sql);
         ?>
-<header > 
-<div  align="center">
-    Thanks for buying products. Click<a href="myorder.php">here</a> to continue,SubTotal<?php echo $_SESSION['total'];?>
-</div>  
-    
+<header >  
         <div class="row">
-            <div class="col-6">
-
-                <table class="table" cellpadding="2" cellspacing="2" border="1"  align="center">
-                    <tr>
-                        <!-- <th>option</th> -->
-                        <th class="table-primary">Id</th>
-                        <th class="table-primary">image</th>
-                        <th class="table-primary">Name</th>
-                        <th class="table-primary">Price</th>
-                        <th class="table-primary">Quantity </th>
-                    </tr>
-                    <tr>
-                        
+                     <div class="col-4"> 
             <?php
 
                 // $sql = "INSERT INTO `order`(name,Total) VALUES ('$CusName','$s')";
@@ -75,28 +59,27 @@ require 'item.php';
             ?>
                         <!-- <td><a href="int.php?index=<?php echo $index; ?>"
                             onclick="return confirm('Are you sure?')">Delete</a></td> -->
-                        <td><?php echo $cart[$i]->ProductID; ?></td>
-                        <td><img src="menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></td>
-                        <td><?php echo $cart[$i]->ProductName; ?></td>
-                        <td><?php echo $cart[$i]->Price; ?></td>
-                        <td><?php echo $cart[$i]->quantity; ?></td>
-                        <td><?php echo $cart[$i]->Price * $cart[$i]->quantity; ?></td>
+                        <!-- <p><?php echo $cart[$i]->ProductID; ?></p> -->
+                        <!-- <p><img src="menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></p> -->
+                       
+                        <!-- <p><?php echo $cart[$i]->Price; ?></p> -->
+                        <div>
+                        <h2><a href="#" class="btn btn-one">Product:<?php echo $cart[$i]->ProductName; ?> Num:<?php echo $cart[$i]->quantity; ?> Price:<?php echo $cart[$i]->Price * $cart[$i]->quantity; ?></a></h2>
+                        </div> 
                     </tr>
                     <?php
                 $index++;
                 }
                 ?>
-                </table>
-     </section>
-            </div>
-        <div class="col-6">
+                </div>  
+                <div class="col-8">
             <div class="hero">
             <h1>Thanks for buying products.
             <br>by <?php echo $CusName?>
             <br>SUM <?php echo $_SESSION['total']; ?></h1>
                 
             <div class="button">
-                <a href="coffee.php" class="btn btn-one"> HOME PAGE</a>
+                <a href="coffee.php" class="btn btn-two"> HOME PAGE</a>
                 <a href="index.php" class="btn btn-two"> SUMORDER PAGE</a>    
             </div>    
                     
@@ -108,7 +91,7 @@ require 'item.php';
         unset($_SESSION['cart']);
     }   
     ?>
-<a href="index.php">Continue Shopping</a> | <a href="coffee.php">Checkout</a>
+
 </body>
 
 </html>

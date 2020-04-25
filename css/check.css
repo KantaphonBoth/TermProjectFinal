@@ -8,11 +8,11 @@ body
 {
     font-family: monospace;
 }
-/* .row
+.row
 {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
-} */
+}
 
 .main-nav
 {
@@ -49,7 +49,7 @@ body
 .hero
 {
     /* position: absolute; */
-    width: 1200px;
+    width: 100%;
     margin-left: 0px;
     margin-top: 0px;
     
@@ -60,9 +60,18 @@ h1
 {
     color: white;
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
-    margin-top: 275px;
+    margin-top: 300px;
+    
+}
+h2
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
     
 }
 header
@@ -75,7 +84,7 @@ header
 .button
 {
     margin-top: 30px;
-    margin-left: 440px;
+    margin-left: 330px;
 }
 
 .btn
@@ -85,15 +94,20 @@ header
     color: white;
     text-decoration: none;
     margin-right: 5px;
-    font-size: 13px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .btn-one
 {
-    background-color: darkorange;
     font-family: "Roboto", sans-serif;
 }
-
+.btn-one:hover
+{
+    background-color: rgb(223, 186, 20);
+    transition: all 0.35s ease-in;
+    
+        
+}
 .btn-two
 {
     font-family: "Roboto", sans-serif;

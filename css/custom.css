@@ -138,7 +138,7 @@ header.header-default{
 	left: 0;
 	right: 0;
 	z-index: 200;
-	background: #fff;
+	background: rgb(0, 0, 0);
 	box-shadow: 0 0 30px rgba(0,0,0,0.1);
 }
 
@@ -152,7 +152,7 @@ header.header-default{
 }
 
 .navbar-expand-md .navbar-nav .nav-link{
-	color: #adadb5;
+	color: #000000;
 	font-size: 18px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -320,6 +320,115 @@ header.header-default{
 
 .home-slider-next{
 	right: 30px;
+}
+
+body {
+    
+    font-family: 'Playfair Display', serif;
+}
+.info0 {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+   
+}
+.info0_text {
+    margin-top: 0px;
+    width: 800px;
+    float: left;
+    color: #666;
+    margin-left: 0px;
+    
+}
+.info0_area h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 20;
+    font-family: 'Playfair Display', serif;
+}
+.info1 {
+    width: 100%;
+    height: 700px;
+    background: rgb(117, 98, 77) url(../img/mn2.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.info1_area {
+    color: rgb(53, 43, 31);  
+}
+.info1_area img {
+    margin-top: 80px;
+    float: left;
+}
+.info1_text {
+    width: 800px;
+    float: left;
+    margin-right: 0px;
+    margin-top: 140px;
+    color: #fff;
+}
+.info1_area h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.info2 {
+    width: 100%;
+    height: 700px;
+    background: #333 url(../img/e.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.info2_area {
+    color: #333;
+}
+.info2_area img {
+    margin-top: 48px;
+    float: left;
+    margin-left: 40px;
+}
+.info2_text {
+    text-align: center;
+    width: 460px;
+    float: left;
+    margin-left: 220px;
+    margin-top: 100px;
+    color: #fff;
+}
+.info2_area h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
+
+
+footer {
+    background: #333;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    color:  rgb(255, 255, 255);
+}
+footer p {
+    margin: 0;
+}
+
+input[type="text"]{
+    height:20px;
+    vertical-align:top;
+}
+.field_wrapper div{
+    margin-bottom:10px;
+}
+.add_button{
+    margin-top:10px;
+    margin-left:10px;
+    vertical-align: text-bottom;
+}
+.remove_button{
+    margin-top:10px;
+    margin-left:10px;
+    vertical-align: text-bottom;
 }
 
 /************************************/

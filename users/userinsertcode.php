@@ -29,13 +29,13 @@ require 'item.php';
     {
         session_start();
         $date = $_POST['SaleDateTime'];
-        $CusName = $_POST['CustomerName'];
+        $CusName = $_SESSION['FName'];
         $CofName = $_POST['nCoffee'];
         $num = $_POST['number'];
         $s = $_SESSION['total'];
-        $ph = $_POST['Phonnumber'];
+        $ph = $_SESSION['phone'];
         
-
+        
         $sql = "INSERT INTO sales (CustomerName,phonNo,SaleDateTime,Total) VALUES ('$CusName','$ph','$date',$s)";
         mysqli_query($conn, $sql);
         ?>

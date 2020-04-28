@@ -49,6 +49,7 @@
                 if(isset($_SESSION['U_D']))
                 {
                     echo    '<form action="../logout.php" method="POST">
+                                <h2>'.$_SESSION['FName'].' '.$_SESSION['LName'].'</h2>
                                 <li class="nav-item"><button type="submit" name="logout" class="btn btn-light">Logout</button></li>
                             </form>';
                 }

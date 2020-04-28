@@ -53,7 +53,7 @@ foreach($result as $row)
  $sub_array[] = $row["SaleDateTime"];
  $sub_array[] = $row["CustomerName"];
  $sub_array[] = $row["Total"];
- $sub_array[] = '<button type="button" name="view" id="'.$row["SaleID"].'" class="btn btn-primary btn-xs view">View</button>';
+ $sub_array[] = '<button type="button" name="view" id="'.$row["SaleID"].'" class="btn btn-dark view">View</button>';
  $total_order = $total_order + floatval($row["Total"]);
  $data[] = $sub_array;
 }

@@ -413,24 +413,12 @@ footer p {
     margin: 0;
 }
 
-input[type="text"]{
-    height:20px;
-    vertical-align:top;
-}
-.field_wrapper div{
-    margin-bottom:10px;
-}
-.add_button{
-    margin-top:10px;
-    margin-left:10px;
-    vertical-align: text-bottom;
-}
-.remove_button{
-    margin-top:10px;
-    margin-left:10px;
-    vertical-align: text-bottom;
-}
 
+labal {
+	text-shadow: 2px 2px 5px rgb(82, 80, 80);
+	color: black;
+	font-size:20px;
+  }
 /************************************/
 /***** 	  About us Section css   ****/
 /************************************/

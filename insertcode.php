@@ -19,10 +19,10 @@
 
 
 $dbhost = 'localhost';
-$dbuser = 'test';
+$dbuser = 'root';
 $dbpass = '123456789';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-$db = mysqli_select_db($conn, 'test');
+$db = mysqli_select_db($conn, 'final');
 require 'item.php';
     
     if(isset($_POST['insertdata']))

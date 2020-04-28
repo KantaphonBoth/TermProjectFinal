@@ -96,7 +96,25 @@ if(isset($_POST['logout']))
     exit();
 }
 ?>
-
+<div class="main-navigation" id="main-navbar">
+		<div class="menu-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
+							<ul class="navbar-nav mx-auto" id="main-menu">
+								<li class="nav-item"><a class="nav-link " href="coffee.php">Home</a></li>
+								<li class="nav-item"><a class="nav-link " href="coffee.php">Menu</a></li>
+								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="myorder.php">My Oder</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div>
 
     <div class="clearfix"></div>
     <footer>

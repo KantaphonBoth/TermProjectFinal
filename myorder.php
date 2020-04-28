@@ -1,52 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COFFEE Shop</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />     
-    <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css3/myorder.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-	<!-- Bootstrap css -->
-	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-	<!-- Font Awesome Icon font css -->
-	<link href="css/fontawesome-all.css" rel="stylesheet">
-	<!-- Flaticon Icon font css -->
-	<link href="css/flaticon.css" rel="stylesheet">
-	<!-- Swiper's CSS -->
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<!-- SlickNav Menu css -->
-	<link href="css/slicknav.css" rel="stylesheet" media="screen">
-	<!-- Main custom css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
-    <link href="css/responsive.css" rel="stylesheet" media="screen">
-    <link href="css/style.css" rel="stylesheet"  media="screen">
-    
-</head>
-<body >
+<?php require_once('Header.php'); ?>
 
-    <div class="preloader">
-		<div class="loader"></div>
-    </div>
     
-    <header class="header-default">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="logo">
-						<a class="navbar-brand" href="coffee.php">
-							<img src="images/logo.png" alt="" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-    </header>
     
     <div class="main-navigation" id="main-navbar">
 		<div class="menu-wrapper">
@@ -58,7 +12,8 @@
 								<li class="nav-item"><a class="nav-link " href="coffee.php">Home</a></li>
 								<li class="nav-item"><a class="nav-link " href="coffee.php">Menu</a></li>
 								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
-								<li class="nav-item"><a class="nav-link active" href="myorder.php">My Oder</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="myorder.php">My Oder</a></li>
+                                <li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -66,19 +21,10 @@
 			</div>
 		</div>
 	</div>
-<script src="js/jquery-1.12.4.min.js"></script>
-	<!-- Bootstrap js file -->
-<script src="js/bootstrap.min.js"></script>
-	<!-- Swiper Carousel js file -->
-<script src="js/swiper.min.js"></script>
-	<!-- SlickNav js file -->
-<script src="js/jquery.slicknav.js"></script>
-	<!-- Smooth Scroll js file -->
-<script src="js/SmoothScroll.js"></script>
-<script src="js/function.js"></script>
 <div>
         <h5 style="text-align:center;">Add Coffee</h5>
-            <div >
+        <div class="row">  
+        <div class="col-6">
                 <?php
                     session_start();
 
@@ -194,23 +140,25 @@
                         </tr>
                     </table>
                     <br>
-                </div>
-                    </form>>
                 
+                    </form>
+                </div>
+                <div class="col-6">
                 <form action="insertcode.php" method="POST" >
                 <div align="center">
-                    <div>
+                    <div class="form-group">
                         <labal>customers Name</labal>
-                        <input type="text" name="CustomerName" placeholder="ชื่อลูกค้า"><br> 
+                        <input class="form-control" type="text" name="CustomerName" placeholder="ชื่อลูกค้า"><br> 
                     </div>
-                    <div>
+                    <div class="form-group">
                         <labal>My Phon</labal>
-                        <input type="text" name="Phonnumber" placeholder="เบอร์โทรลูกค้า"><br> 
+                        <input class="form-control" type="text" name="Phonnumber" placeholder="เบอร์โทรลูกค้า"><br> 
                     </div>
-                    <div>
+                    <div class="form-group">
                         <labal> DateTime</labal>
-                        <input type="datetime-local" id="send"  oninput="SaleDateTime.value = send.value">
-                        <input type="text" name="SaleDateTime"  id="SaleDateTime" placeholder="วันที่สั่ง">
+                        <input class="form-control" type="datetime-local" id="send"  oninput="SaleDateTime.value = send.value">
+                        <br>
+                        <input class="form-control" type="text" name="SaleDateTime"  id="SaleDateTime" placeholder="วันที่สั่ง">
                     </div>
                     
                 </div>
@@ -221,12 +169,13 @@
                 <button type="submit" name="insertdata" class="btn btn-primary">Confirmed</button>
             </div>
             </form>
+        </div>
+    </div>  
 </div>
 
     <footer>
         <p>Coffee Shop &copy;  | CPE04 Group2 </p>
     </footer>
     
-</body>
-</html>    
+	<?php require_once('footer.php'); ?>    
     

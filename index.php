@@ -1,107 +1,112 @@
-<html>
- <title>Sales summary</title>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
- <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- <script src="https://www.jqueryscript.net/demo/Dialog-Modal-Dialogify/dist/dialogify.min.js"></script>
- <link href="css/sales.css" rel="stylesheet" media="screen">
- <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
- <link href="css/swiper.min.css" rel="stylesheet" >
-</head>
- <body>
- <meta http-equiv="Content-Type" content="Text/html; charset=tis-620">
- <title></title>
-  
-  <div class="main-navigation" id="main-navbar">
+<?php require_once('header.php'); ?>
+	
+	<!-- Navigation Starts -->
+	<div class="main-navigation" id="main-navbar">
 		<div class="menu-wrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
-							<ul class="navbar-nav" id="main-menu">
-								<li class="nav-item"><a class="nav-link active" href="coffee.php">Home</a></li>
-								<li class="nav-item"><a class="nav-link active" href="coffee.php">Menu</a></li>
+							<ul class="navbar-nav mx-auto" id="main-menu">
+								<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
 								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
 								<li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
+								<li class="nav-item"><a class="nav-link" href="index.php">Sales summary</a></li>
 							
 							</ul>	
+							<div class="navbar-toggle"><span>Menu</span></div>
+							<div id="responsive-menu"></div>
 						</nav>
 					</div>
 				</div>
 			</div>
-            </div>
-            
+		</div>
 </div>
-<br>
-<br>
-<br>
-  <div class="container box">
-   <h3>SALES SUMMARY</h3>
-   <br />
-   <div class="table-responsive">
-    <table id="order_data" class="table table-bordered ">
-     <thead>
-      <tr bgcolor="#363636" >
-       <th>SaleID</th>
-       <th>SaleDateTime</th>
-       <th>CustomerName</th>
-       <th>Total</th>
-       <th>View</th>
-      </tr>
-     </thead>
-     <tbody></tbody>
-     <tfoot id="t01">
-      <tr>
-       <th colspan="3">Total</th>
-       <th colspan="2" id="total_order"></th>
-      </tr>
-     </tfoot>
-    </table>
-    <br />
-    <br />
-    <br />
-   </div>
-  </div>
- </body>
-</html>
-<script src="js/swiper.min.js"></script>
-<script src="js/function.js"></script>
-<script type="text/javascript" language="javascript" >
- $(document).ready(function(){
-  
-   var dataTable = $('#order_data').DataTable({
-    "processing" : true,
-    "serverSide" : true,
-    "order" : [],
-    "ajax" : {
-     url:"fetch.php",
-     type:"POST"
-    },
-    drawCallback:function(settings)
-    {
-     $('#total_order').html(settings.json.total);
-    }
-   });
-    
-   $(document).on('click', '.view', function(){
-  var id = $(this).attr('id');
-  var options = {
-   ajaxPrefix: '',
-   ajaxData: {id:id},
-   ajaxComplete:function(){
-    this.buttons([{
-     type: Dialogify.BUTTON_PRIMARY
-    }]);
-   }
-  };
-  new Dialogify('fetch_single.php', options)
-   .title('View Employee Details')
-   .showModal();
- });
 
- });
- 
-</script>
+<div class="home-slider-section" id="home">
+		<div class="container-fluid">
+			<div class="row no-gutter">
+				<div class="col-md-12">
+					<div class="swiper-container home-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/55.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+							
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/56.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/57.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="home-slide" style="background-image: url(images/59.jpg);">
+									<div class="home-slide-content">
+										<h3>Hello Everyone!</h3>
+										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
+										<br />
+									that right to be here!</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="home-slider-prev"><i class="fa fa-angle-left"></i></div>
+						<div class="home-slider-next"><i class="fa fa-angle-right"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <section class="info0" id="menu">
+        <div class="container">
+            <div class="info0_area">
+                
+                <div class="info0_text">
+                    <h4>Menu</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info1">
+        <div class="container">
+            <div class="info1_area">
+                
+                <div class="info1_text">
+                    <h1></h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Coffee Shop &copy;  | CPE04 Group2 </p>
+    </footer>
+<?php require_once('footer.php'); ?>

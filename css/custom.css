@@ -413,10 +413,7 @@ footer p {
     margin: 0;
 }
 
-input[type="text"]{
-    height:20px;
-    vertical-align:top;
-}
+
 .field_wrapper div{
     margin-bottom:10px;
 }
@@ -431,6 +428,11 @@ input[type="text"]{
     vertical-align: text-bottom;
 }
 
+labal {
+	text-shadow: 2px 2px 5px rgb(82, 80, 80);
+	color: black;
+	font-size:20px;
+  }
 /************************************/
 /***** 	  About us Section css   ****/
 /************************************/

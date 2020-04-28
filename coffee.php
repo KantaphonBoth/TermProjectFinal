@@ -1,51 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Awaiken Theme">
-	<!-- Page Title -->
-	<title>COFFEE Shop</title>
-	<!-- Google Fonts css-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-	<!-- Bootstrap css -->
-	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-	<!-- Font Awesome Icon font css -->
-	<link href="css/fontawesome-all.css" rel="stylesheet">
-	<!-- Flaticon Icon font css -->
-	<link href="css/flaticon.css" rel="stylesheet">
-	<!-- Swiper's CSS -->
-	<link href="css/swiper.min.css" rel="stylesheet" >
-	<!-- SlickNav Menu css -->
-	<link href="css/slicknav.css" rel="stylesheet" media="screen">
-	<!-- Main custom css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
-    <link href="css/responsive.css" rel="stylesheet" media="screen">
-    
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!-- [if lt IE 9]> -->
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<!-- <![endif] -->
-	
-</head>
 
-<body data-spy="scroll" data-target="#navigation" data-offset="63">
-	
+	<?php require_once('header.php'); ?>
     
     <!-- Preloader Starts -->
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div class="loader"></div>
-	</div>
+	</div> -->
 	<!-- Preloader Ends -->
 	
 	<!-- Header Section Starts -->
-	<header class="header-default">
+	<!-- <header class="header-default">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -57,7 +20,7 @@
 				</div>
 			</div>
 		</div>
-	</header>
+	</header> -->
 	<!-- Header Section ends-->
 	
 	<!-- Navigation Starts -->
@@ -69,9 +32,10 @@
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
 							<ul class="navbar-nav mx-auto" id="main-menu">
 								<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-								<li class="nav-item"><a class="nav-link active" href="#menu">Menu</a></li>
+								<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
 								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
 								<li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
+								<li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
 							
 							</ul>	
 							<div class="navbar-toggle"><span>Menu</span></div>
@@ -145,18 +109,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Home Slider Section Ends -->
-	<!-- Jquery Library File -->
-	<script src="js/jquery-1.12.4.min.js"></script>
-	<!-- Bootstrap js file -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Swiper Carousel js file -->
-	<script src="js/swiper.min.js"></script>
-	<!-- SlickNav js file -->
-	<script src="js/jquery.slicknav.js"></script>
-	<!-- Smooth Scroll js file -->
-	<script src="js/SmoothScroll.js"></script>
-    <script src="js/function.js"></script>
 	
 	<section class="info0" id="menu">
         <div class="container">
@@ -186,6 +138,6 @@
 
 	<footer>
         <p>Coffee Shop &copy;  | CPE04 Group2 </p>
-    </footer>
-</body>
-</html>
+	</footer>
+	
+	<?php require_once('footer.php'); ?>

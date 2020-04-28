@@ -33,9 +33,9 @@
 							<ul class="navbar-nav mx-auto" id="main-menu">
 								<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
 								<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
-								<li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
-								<li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
+								<li class="nav-item"><a class="nav-link " href="userservice.php">Service</a></li>
+								<li class="nav-item"><a class="nav-link" href="usermyorder.php">My Oder</a></li>
+								<li class="nav-item"><a class="nav-link" href="usersum.php">Sales summary</a></li>
 							
 							</ul>	
 							<div class="navbar-toggle"><span>Menu</span></div>
@@ -60,7 +60,7 @@
 					<div class="swiper-container home-slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/55.jpg);">
+								<div class="home-slide" style="background-image: url(../images/55.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -71,7 +71,7 @@
 							</div>
 							
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/56.jpg);">
+								<div class="home-slide" style="background-image: url(../images/56.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -81,7 +81,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/57.jpg);">
+								<div class="home-slide" style="background-image: url(../images/57.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -91,7 +91,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/59.jpg);">
+								<div class="home-slide" style="background-image: url(../images/59.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online

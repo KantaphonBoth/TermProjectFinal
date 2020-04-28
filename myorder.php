@@ -13,7 +13,6 @@
 								<li class="nav-item"><a class="nav-link " href="coffee.php">Menu</a></li>
 								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="myorder.php">My Oder</a></li>
-                                <li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
 							</ul>
 						</nav>
 					</div>

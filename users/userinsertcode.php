@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Page test</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link href="css/check.css" rel="stylesheet" type="text/css">
+<link href="../css/check.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -75,12 +75,12 @@ require 'item.php';
                 <div class="col-8">
             <div class="hero">
             <h1>Thanks for buying products.
-            <br>by <?php echo $CusName?>
+            <br>by <?php echo $_SESSION['FName']?>
             <br>SUM <?php echo $_SESSION['total']; ?></h1>
                 
             <div class="button">
-                <a href="coffee.php" class="btn btn-two"> HOME PAGE</a>
-                <a href="sum.php" class="btn btn-two"> SUMORDER PAGE</a>    
+                <a href="usercoffee.php" class="btn btn-two"> HOME PAGE</a>
+                <a href="usersum.php" class="btn btn-two"> SUMORDER PAGE</a>    
             </div>    
                     
             </header>

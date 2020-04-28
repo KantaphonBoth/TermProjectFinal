@@ -11,7 +11,6 @@
 								<li class="nav-item"><a class="nav-link " href="coffee.php">Menu</a></li>
 								<li class="nav-item"><a class="nav-link active" href="#cart">Service</a></li>
 								<li class="nav-item"><a class="nav-link " href="myorder.php">My Oder</a></li>
-								<li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
 							</ul>
 							
 							<div class="navbar-toggle"><span>Menu</span></div>

@@ -7,11 +7,11 @@
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
 							<ul class="navbar-nav mx-auto" id="main-menu">
-								<li class="nav-item"><a class="nav-link " href="coffee.php">Home</a></li>
-								<li class="nav-item"><a class="nav-link " href="coffee.php">Menu</a></li>
+								<li class="nav-item"><a class="nav-link " href="usercoffee.php">Home</a></li>
+								<li class="nav-item"><a class="nav-link " href="usercoffee.php">Menu</a></li>
 								<li class="nav-item"><a class="nav-link active" href="#cart">Service</a></li>
-								<li class="nav-item"><a class="nav-link " href="myorder.php">My Oder</a></li>
-								<li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
+								<li class="nav-item"><a class="nav-link " href="usermyorder.php">My Oder</a></li>
+								<li class="nav-item"><a class="nav-link" href="usersum.php">Sales summary</a></li>
 							</ul>
 							
 							<div class="navbar-toggle"><span>Menu</span></div>
@@ -30,7 +30,7 @@
 					<div class="swiper-container home-slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/55.jpg);">
+								<div class="home-slide" style="background-image: url(../images/55.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -41,7 +41,7 @@
 							</div>
 							
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/56.jpg);">
+								<div class="home-slide" style="background-image: url(../images/56.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -51,7 +51,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/57.jpg);">
+								<div class="home-slide" style="background-image: url(../images/57.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -61,7 +61,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/59.jpg);">
+								<div class="home-slide" style="background-image: url(../images/59.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -81,7 +81,7 @@
 	</div>
 
 
-    <section style="background-image: url(img/e.jpg)">
+    <section style="background-image: url(../img/e.jpg)">
             <div>
     <br>
         <h5 style="text-align:center;" id="cart">Add Coffee</h5>
@@ -102,10 +102,10 @@
         while($product = mysqli_fetch_object($sql_run)) 
         {?>
         <div class="col-md-4">
-            <form method="post" action="myorder.php?ProductID=<?php echo $product->ProductID; ?>&action=add">
+            <form method="post" action="usermyorder.php?ProductID=<?php echo $product->ProductID; ?>&action=add">
                 <div style="border:25px solid #333; background-color:#f1f1f1; border-radius:25px; padding:50px;" align="center">
                     <h6><?php echo $product->ProductID; ?></h6>
-                    <img src="menu/<?php echo $product->image;?>" class="img-responsive" style="width:300px;height:300px;" /><br />
+                    <img src="../menu/<?php echo $product->image;?>" class="img-responsive" style="width:300px;height:300px;" /><br />
                     <h4><?php echo $product->ProductName; ?></h4>
                     <h4><?php echo $product->Price; ?></h4>
                     <input type="submit" value="Buy" style="margin-top:5px;" class="btn btn-success"></input>

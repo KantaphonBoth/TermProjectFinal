@@ -36,7 +36,7 @@
                     $_SESSION['UserName']=$row['UserName'];
                     $_SESSION['Password']=$row['Password'];
 
-                    header("location: coffee.php?Well");
+                    header("location: users/usercoffee.php?Well");
                     exit();
 
                 }

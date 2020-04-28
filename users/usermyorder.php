@@ -9,11 +9,11 @@
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
 							<ul class="navbar-nav mx-auto" id="main-menu">
-								<li class="nav-item"><a class="nav-link " href="coffee.php">Home</a></li>
-								<li class="nav-item"><a class="nav-link " href="coffee.php">Menu</a></li>
-								<li class="nav-item"><a class="nav-link " href="service.php">Service</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="myorder.php">My Oder</a></li>
-                                <li class="nav-item"><a class="nav-link" href="sum.php">Sales summary</a></li>
+								<li class="nav-item"><a class="nav-link " href="usercoffee.php">Home</a></li>
+								<li class="nav-item"><a class="nav-link " href="usercoffee.php">Menu</a></li>
+								<li class="nav-item"><a class="nav-link " href="userservice.php">Service</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#order">My Oder</a></li>
+                                <li class="nav-item"><a class="nav-link" href="usersum.php">Sales summary</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -22,9 +22,9 @@
 		</div>
 	</div>
 <div>
-        <h5 style="text-align:center;">Add Coffee</h5>
-        <div class="row">  
-        <div class="col-6">
+        <h5 style="text-align:center;" id="order"><a class="nav-link" href="userservice.php">Add Coffee</a></h5>
+        <div>  
+        <div>
                 <?php
                     session_start();
 
@@ -120,10 +120,10 @@
                             $_SESSION['total'] += $cart[$i]->Price * $cart[$i]->quantity;
                             ?>
                         <tr>
-                            <td><a href="myorder.php?index=<?php echo $index; ?>"
+                            <td><a href="usermyorder.php?index=<?php echo $index; ?>"
                                 onclick="return confirm('Are you sure?')">Delete</a></td>
                             <td><?php echo $cart[$i]->ProductID; ?></td>
-                            <td><img src="menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></td>
+                            <td><img src="../menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></td>
                             <td><?php echo $cart[$i]->ProductName; ?></td>
                             <td><?php echo $cart[$i]->Price; ?></td>
                             <td><input type="number" value="<?php echo $cart[$i]->quantity; ?>" 
@@ -143,17 +143,9 @@
                 
                     </form>
                 </div>
-                <div class="col-6">
-                <form action="insertcode.php" method="POST" >
-                <div align="center">
-                    <div class="form-group">
-                        <labal>customers Name</labal>
-                        <input class="form-control" type="text" name="CustomerName" placeholder="ชื่อลูกค้า"><br> 
-                    </div>
-                    <div class="form-group">
-                        <labal>My Phon</labal>
-                        <input class="form-control" type="text" name="Phonnumber" placeholder="เบอร์โทรลูกค้า"><br> 
-                    </div>
+                <div>
+                <form action="userinsertcode.php" method="POST" >
+                <div class="container" align="center">
                     <div class="form-group">
                         <labal> DateTime</labal>
                         <input class="form-control" type="datetime-local" id="send"  oninput="SaleDateTime.value = send.value">
@@ -167,6 +159,7 @@
             <div align="center">
                 
                 <button type="submit" name="insertdata" class="btn btn-primary">Confirmed</button>
+                
             </div>
             </form>
         </div>

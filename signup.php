@@ -5,7 +5,7 @@
     if(isset($_POST['signup']))
     {
 
-        if(empty($_POST['FName']) || empty($_POST['LName']) || empty($_POST['Email']) || empty($_POST['UserName']) || empty($_POST['password']))
+        if(empty($_POST['FName']) || empty($_POST['LName']) || empty($_POST['Email'])  || empty($_POST['phone']) || empty($_POST['UserName']) || empty($_POST['password']))
         {
             header("location: signupdesign.php?empty");
         }
@@ -14,6 +14,7 @@
             $FName=mysqli_real_escape_string($con,$_POST['FName']);
             $LName=mysqli_real_escape_string($con,$_POST['LName']);
             $Email=mysqli_real_escape_string($con,$_POST['Email']);
+            $Phone=mysqli_real_escape_string($con,$_POST['Phone']);
             $UserName=mysqli_real_escape_string($con,$_POST['UserName']);
             $Password=mysqli_real_escape_string($con,$_POST['password']);
 
@@ -51,12 +52,23 @@
                         }
                         else
                         {
-                            $Hash = password_hash($Password, PASSWORD_DEFAULT);
-                            $query = " insert into users (FName,LName,Email,UserName,Password) values ('$FName', '$LName', '$Email', '$UserName','$Password')";
-                            $result = mysqli_query($con,$query);
-                            header("location: signupdesign.php?success");
-                            exit();                                
-                            
+                            $query = " select * from users where phoneNo='".$Phone."'";
+                        $result = mysqli_query($con,$query);
+
+                        if(mysqli_fetch_assoc($result))
+                        {
+                            header("location: signupdesign.php?Email");
+                            exit();
+                        }
+                            else
+                            {
+                                $Hash = password_hash($Password, PASSWORD_DEFAULT);
+                                $query = " insert into users (FName,LName,Email,phonNo,UserName,Password) values ('$FName', '$LName', '$Email','$Phone', '$UserName','$Password')";
+                                $result = mysqli_query($con,$query);
+                                header("location: signupdesign.php?success");
+                                exit();                                
+                                
+                            }
                         }
                     }
                 }

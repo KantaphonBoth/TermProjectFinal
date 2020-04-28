@@ -7,9 +7,9 @@
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  <script src="https://www.jqueryscript.net/demo/Dialog-Modal-Dialogify/dist/dialogify.min.js"></script>
- <link href="css/sales.css" rel="stylesheet" media="screen">
+ <link href="../css/sales.css" rel="stylesheet" media="screen">
  <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
- <link href="css/swiper.min.css" rel="stylesheet" >
+ <link href="../css/swiper.min.css" rel="stylesheet" >
 </head>
  <body>
  <meta http-equiv="Content-Type" content="Text/html; charset=tis-620">
@@ -22,10 +22,10 @@
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-md navbar-light" id="navigation">
 							<ul class="navbar-nav" id="main-menu">
-								<li class="nav-item"><a class="nav-link" href="coffee.php">Home</a></li>
-								<li class="nav-item"><a class="nav-link" href="coffee.php">Menu</a></li>
-								<li class="nav-item"><a class="nav-link" href="service.php">Service</a></li>
-                <li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
+								<li class="nav-item"><a class="nav-link" href="usercoffee.php">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="usercoffee.php">Menu</a></li>
+								<li class="nav-item"><a class="nav-link" href="userservice.php">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="usermyorder.php">My Oder</a></li>
                 <li class="nav-item"><a class="nav-link active" href="#sum">Sales summary</a></li>
 							
 							</ul>	
@@ -70,8 +70,8 @@
   </div>
  </body>
 </html>
-<script src="js/swiper.min.js"></script>
-<script src="js/function.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/function.js"></script>
 <script type="text/javascript" language="javascript" >
  $(document).ready(function(){
   

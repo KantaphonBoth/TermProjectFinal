@@ -29,9 +29,9 @@
                     session_start();
 
                     $dbhost = 'localhost';
-                    $dbuser = 'test';
+                    $dbuser = 'root';
                     $dbpass = '123456789';
-                    $dbname = 'test';
+                    $dbname = 'final';
                     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
                     require 'item.php';

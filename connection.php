@@ -1,6 +1,6 @@
 <?php
 
-    $con=mysqli_connect('localhost','root','123456789','coffeeshop');
+    $con=mysqli_connect('localhost','root','123456789','final');
     
     if(!$con)
     {

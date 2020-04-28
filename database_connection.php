@@ -4,6 +4,6 @@
 
 $username = 'root';
 $password = '123456789';
-$connect = new PDO( 'mysql:host=localhost;dbname=test', $username, $password );
+$connect = new PDO( 'mysql:host=localhost;dbname=final', $username, $password );
 
 ?>

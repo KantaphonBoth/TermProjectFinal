@@ -29,7 +29,16 @@
     <link href="css/style.css" rel="stylesheet"  media="screen">
     
 </head>
-<body style="background:#FCFBFB;">
+
+<style>
+body {
+  background-image: url('img/1818.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<body>
 <div class="preloader">
 		<div class="loader"></div>
     </div>

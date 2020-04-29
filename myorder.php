@@ -115,21 +115,21 @@
                             $_SESSION['total'] += $cart[$i]->Price * $cart[$i]->quantity;
                             ?>
                         <tr>
-                            <td><a href="myorder.php?index=<?php echo $index; ?>"
+                            <td class="table-light" ><a href="myorder.php?index=<?php echo $index; ?>"
                                 onclick="return confirm('Are you sure?')">Delete</a></td>
-                            <td><?php echo $cart[$i]->ProductID; ?></td>
-                            <td><img src="menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></td>
-                            <td><?php echo $cart[$i]->ProductName; ?></td>
-                            <td><?php echo $cart[$i]->Price; ?></td>
-                            <td><input type="number" value="<?php echo $cart[$i]->quantity; ?>" 
+                            <td class="table-light" ><?php echo $cart[$i]->ProductID; ?></td>
+                            <td class="table-light"><img src="menu/<?php echo $cart[$i]->image; ?>" style="width:150px;height:150px;"/></td>
+                            <td class="table-light"><?php echo $cart[$i]->ProductName; ?></td>
+                            <td class="table-light"><?php echo $cart[$i]->Price; ?></td>
+                            <td class="table-light"><input type="number" value="<?php echo $cart[$i]->quantity; ?>" 
                                 style="width:50px;" name="quantity[]"/></td>
-                            <td><?php echo $_SESSION['Sprice']; ?></td>
+                            <td class="table-light"><?php echo $_SESSION['Sprice']; ?></td>
                         </tr>
                         <?php
                             $index++;
                         }
                         ?>
-                        <tr>
+                        <tr class="table-warning"> 
                             <td colspan="6" align="center">sum</td>
                             <td align="left"><?php echo $_SESSION['total']; ?></td>
                         </tr>

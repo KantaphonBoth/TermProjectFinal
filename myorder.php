@@ -21,17 +21,13 @@
 		</div>
 	</div>
 <div>
-        <h5 style="text-align:center;">Add Coffee</h5>
+        <h5 style="text-align:center;"><a class="nav-link" href="service.php" >Add Coffee</a></h5>
         <div class="row">  
         <div class="col-6">
                 <?php
                     session_start();
 
-                    $dbhost = 'localhost';
-                    $dbuser = 'root';
-                    $dbpass = '123456789';
-                    $dbname = 'final';
-                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                    require_once('connection.php');
 
                     require 'item.php';
 

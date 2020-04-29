@@ -89,11 +89,7 @@
     <div class="row">
         <?php
 
-        $dbhost = 'localhost';
-        $dbuser = 'root';
-        $dbpass = '123456789';
-        $dbname = 'final';
-        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+		require_once('connection.php');
 
         $sql = "SELECT * FROM products";
         $sql_run = mysqli_query($conn, $sql);

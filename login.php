@@ -11,12 +11,12 @@
         }
         else
         {
-            $UserName = mysqli_real_escape_string($con,$_POST['UserName']);
-            $Email=mysqli_real_escape_string($con,$_POST['Email']);
-            $Password = mysqli_real_escape_string($con,$_POST['password']);
+            $UserName = mysqli_real_escape_string($conn,$_POST['UserName']);
+            $Email=mysqli_real_escape_string($conn,$_POST['Email']);
+            $Password = mysqli_real_escape_string($conn,$_POST['password']);
 
             $Query = " select * from users where UserName='".$UserName."' or Email='".$Email."'";
-            $result = mysqli_query($con,$Query);
+            $result = mysqli_query($conn,$Query);
 
             if($row=mysqli_fetch_assoc($result))
             {

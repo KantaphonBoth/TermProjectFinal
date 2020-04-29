@@ -18,10 +18,7 @@
 <?php
 
 
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '123456789';
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+require_once('connection.php');
 $db = mysqli_select_db($conn, 'final');
 require 'item.php';
     

@@ -29,14 +29,14 @@
     <link href="css/style.css" rel="stylesheet"  media="screen">
     
 </head>
-<body >
+<body style="background:#FCFBFB;">
 <div class="preloader">
 		<div class="loader"></div>
     </div>
     
     <nav class="navbar navbar-expand-sm navbar-dark bg-white">
         <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="coffee.php">
 							<img src="images/logo.png" alt="" />
 						</a>
 

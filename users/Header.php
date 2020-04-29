@@ -29,7 +29,7 @@
     <link href="../css/style.css" rel="stylesheet"  media="screen">
     
 </head>
-<body >
+<body style="background:#FCFBFB;">
 <div class="preloader">
 		<div class="loader"></div>
     </div>

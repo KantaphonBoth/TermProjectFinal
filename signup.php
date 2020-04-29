@@ -11,12 +11,12 @@
         }
         else
         {
-            $FName=mysqli_real_escape_string($con,$_POST['FName']);
-            $LName=mysqli_real_escape_string($con,$_POST['LName']);
-            $Email=mysqli_real_escape_string($con,$_POST['Email']);
-            $Phone=mysqli_real_escape_string($con,$_POST['phonNo']);
-            $UserName=mysqli_real_escape_string($con,$_POST['UserName']);
-            $Password=mysqli_real_escape_string($con,$_POST['password']);
+            $FName=mysqli_real_escape_string($conn,$_POST['FName']);
+            $LName=mysqli_real_escape_string($conn,$_POST['LName']);
+            $Email=mysqli_real_escape_string($conn,$_POST['Email']);
+            $Phone=mysqli_real_escape_string($conn,$_POST['phonNo']);
+            $UserName=mysqli_real_escape_string($conn,$_POST['UserName']);
+            $Password=mysqli_real_escape_string($conn,$_POST['password']);
 
             if(!preg_match("/^[a-zA-Z]*$/",$FName) || !preg_match("/^[a-zA-Z]*$/",$LName))
             {
@@ -33,7 +33,7 @@
                 else
                 {
                     $query = " select * from users where UserName='".$UserName."'";
-                    $result = mysqli_query($con,$query);
+                    $result = mysqli_query($conn,$query);
 
                     if(mysqli_fetch_assoc($result))
                     {
@@ -43,7 +43,7 @@
                     else
                     {
                         $query = " select * from users where Email='".$Email."'";
-                        $result = mysqli_query($con,$query);
+                        $result = mysqli_query($conn,$query);
 
                         if(mysqli_fetch_assoc($result))
                         {
@@ -53,18 +53,18 @@
                         else
                         {
                             $query = " select * from users where phonNo='".$Phone."'";
-                        $result = mysqli_query($con,$query);
+                        $result = mysqli_query($conn,$query);
 
                         if(mysqli_fetch_assoc($result))
                         {
-                            header("location: signupdesign.php?Email");
+                            header("location: signupdesign.php?Phone");
                             exit();
                         }
                             else
                             {
                                 $Hash = password_hash($Password, PASSWORD_DEFAULT);
                                 $query = " insert into users (FName,LName,Email,phonNo,UserName,Password) values ('$FName', '$LName', '$Email','$Phone', '$UserName','$Password')";
-                                $result = mysqli_query($con,$query);
+                                $result = mysqli_query($conn,$query);
                                 header("location: signupdesign.php?success");
                                 exit();                                
                                 

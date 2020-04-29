@@ -62,7 +62,7 @@
                         }
                             else
                             {
-                                $Hash = password_hash($Password, PASSWORD_DEFAULT);
+                                // $Hash = password_hash($Password, PASSWORD_DEFAULT);
                                 $query = " insert into users (FName,LName,Email,phonNo,UserName,Password) values ('$FName', '$LName', '$Email','$Phone', '$UserName','$Password')";
                                 $result = mysqli_query($conn,$query);
                                 header("location: signupdesign.php?success");
@@ -78,7 +78,7 @@
     }
     else
     {
-        header("location: index.php");
+        header("location: coffee.php");
         exit();
     }
 

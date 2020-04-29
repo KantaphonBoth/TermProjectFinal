@@ -181,7 +181,7 @@ body {
                             <input type="text" name="FName" placeholder="First Name" class="form-control my-2">
                             <input type="text" name="LName" placeholder="Last Name" class="form-control my-2">
                             <input type="text" name="Email" placeholder="Email" class="form-control my-2">
-                            <input type="text" name="phone" placeholder="phone number" class="form-control my-2">
+                            <input type="text" name="phonNo" placeholder="phone number" class="form-control my-2">
                             <input type="text" name="UserName" placeholder="User Name" class="form-control my-2">
                             
                             <input type="password" name="password" placeholder="Password " class="form-control mb-3">

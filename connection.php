@@ -1,8 +1,8 @@
 <?php
 
-    $conn=mysqli_connect('localhost','root','123456789','final');
+    $con=mysqli_connect('localhost','root','123456789','final');
     
-    if(!$conn)
+    if(!$con)
     {
         die('Connection Error'.mysqli_error());
     }

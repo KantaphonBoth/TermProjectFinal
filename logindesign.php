@@ -32,7 +32,7 @@
 
 <style>
 body {
-  background-image: url('img/22.jpg');
+  background-image: url('img/1818.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -46,7 +46,7 @@ body {
     
     <nav class="navbar navbar-expand-sm navbar-dark bg-white">
         <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="coffee.php">
 							<img src="images/logo.png" alt="" />
 						</a>
 

@@ -31,7 +31,7 @@
 </head>
 <style>
 body {
-  background-image: url('img/1818.jpg');
+  background-image: url('../img/1818.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;

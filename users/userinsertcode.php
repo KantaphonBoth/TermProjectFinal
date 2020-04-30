@@ -18,11 +18,7 @@
 <?php
 
 
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '123456789';
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-$db = mysqli_select_db($conn, 'final');
+require_once('../connection.php');
 require 'item.php';
     
     if(isset($_POST['insertdata']))
@@ -30,10 +26,9 @@ require 'item.php';
         session_start();
         $date = $_POST['SaleDateTime'];
         $CusName = $_SESSION['FName'];
-        $CofName = $_POST['nCoffee'];
         $num = $_POST['number'];
         $s = $_SESSION['total'];
-        $ph = $_SESSION['phone'];
+        $ph = $_SESSION['phonNo'];
         
         
         $sql = "INSERT INTO sales (CustomerName,phonNo,SaleDateTime,Total) VALUES ('$CusName','$ph','$date',$s)";

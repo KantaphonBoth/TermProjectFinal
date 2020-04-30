@@ -33,7 +33,7 @@
                     $_SESSION['FName']=$row['FName'];
                     $_SESSION['LName']=$row['LName'];
                     $_SESSION['Email']=$row['Email'];
-                    $_SESSION['phone']=$row['phone'];
+                    $_SESSION['phonNo']=$row['phonNo'];
                     $_SESSION['UserName']=$row['UserName'];
                     $_SESSION['Password']=$row['Password'];
 

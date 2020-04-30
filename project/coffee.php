@@ -37,8 +37,6 @@
 								<li class="nav-item"><a class="nav-link" href="myorder.php">My Oder</a></li>
 							
 							</ul>	
-							<div class="navbar-toggle"><span>Menu</span></div>
-							<div id="responsive-menu"></div>
 						</nav>
 					</div>
 				</div>

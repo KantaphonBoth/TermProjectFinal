@@ -59,7 +59,7 @@
 					<div class="swiper-container home-slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/55.jpg);">
+								<div class="home-slide" style="background-image: url(img/55.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -70,7 +70,7 @@
 							</div>
 							
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/56.jpg);">
+								<div class="home-slide" style="background-image: url(img/56.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -80,7 +80,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/57.jpg);">
+								<div class="home-slide" style="background-image: url(img/57.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online
@@ -90,7 +90,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="home-slide" style="background-image: url(images/59.jpg);">
+								<div class="home-slide" style="background-image: url(img/59.jpg);">
 									<div class="home-slide-content">
 										<h3>Hello Everyone!</h3>
 										<h2>This is the COFFEE Shop, It's online website, If you find coffee shop online

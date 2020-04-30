@@ -80,7 +80,7 @@
 	</div>
 
 
-    <section style="background-image: url(img/e.jpg)">
+    <section style="background-image: url(img/1818.jpg)">
             <div>
     <br>
         <h5 style="text-align:center;" id="cart">Add Coffee</h5>

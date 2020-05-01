@@ -47,7 +47,7 @@ body {
     <nav class="navbar navbar-expand-sm navbar-dark bg-white">
         <div class="container">
         <a class="navbar-brand" href="coffee.php">
-							<img src="images/logo.png" alt="" />
+							<img src="img/logo.png" alt="" />
 						</a>
 
             <div class="collapse navbar-collapse">

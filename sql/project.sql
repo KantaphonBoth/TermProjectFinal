@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2020 at 11:41 AM
+-- Generation Time: May 01, 2020 at 11:58 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -19,48 +19,38 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project`
+-- Database: `final`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Table structure for table `ordersdetall`
 --
 
-CREATE TABLE `customers` (
-  `CustomerID` int(11) NOT NULL,
-  `CustomerName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Gender` enum('M','F') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerType` enum('Member','VIP','Other') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerTelNo` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `ordersdetall` (
+  `productid` int(11) NOT NULL,
+  `ordersid` int(100) NOT NULL,
+  `price` decimal(10,0) NOT NULL,
+  `quantity` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `customers`
+-- Dumping data for table `ordersdetall`
 --
 
-INSERT INTO `customers` (`CustomerID`, `CustomerName`, `Gender`, `CustomerType`, `CustomerTelNo`) VALUES
-(1111, 'pang', 'F', 'Member', '0986900241'),
-(1112, 'yut', 'M', 'VIP', '0991236789'),
-(1113, 'kung', 'F', 'Other', '0981021614'),
-(1114, 'boat', 'M', 'VIP', '0934969681'),
-(1115, 'toon', 'M', 'Other', '0934795670'),
-(1116, 'non', 'M', 'Other', '0801237890'),
-(1117, 'bunny', 'F', 'Member', '0937895432'),
-(1118, 'buddy', 'M', 'VIP', '0828905643'),
-(1119, 'run', 'F', 'Member', '0869024321'),
-(1120, 'vanny', 'F', 'Other', '0954958900'),
-(1121, 'king', 'F', 'Member', '0999999991'),
-(1122, 'ning', 'F', 'VIP', '0999999992'),
-(1123, 'may', 'F', 'Other', '0999999993'),
-(1124, 'ly', 'F', 'VIP', '0999999994'),
-(1125, 'candy', 'F', 'VIP', '0999999995'),
-(1126, 'fah', 'F', 'Member', '0999999996'),
-(1127, 'city', 'M', 'Other', '0999999997'),
-(1128, 'bag', 'M', 'Member', '0999999998'),
-(1129, 'molee', 'F', 'Member', '0999999981'),
-(1130, 'one', 'M', 'Other', '0999999982');
+INSERT INTO `ordersdetall` (`productid`, `ordersid`, `price`, `quantity`) VALUES
+(2, 1, '50', 1),
+(9, 1, '40', 1),
+(15, 1, '60', 1),
+(6, 2, '40', 1),
+(10, 2, '50', 1),
+(11, 2, '225', 5),
+(2, 2, '150', 3),
+(9, 3, '40', 1),
+(5, 3, '50', 1),
+(8, 4, '40', 1),
+(2, 4, '150', 3);
 
 -- --------------------------------------------------------
 
@@ -72,34 +62,34 @@ CREATE TABLE `products` (
   `ProductID` int(11) NOT NULL,
   `ProductName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Price` float NOT NULL,
-  `ProductDetail` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `ProductDetail`) VALUES
-(1, 'cocoa', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(2, 'americano', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(3, 'mocha', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(4, 'espresso', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(5, 'latte', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(6, 'green tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(7, 'fresh milk', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(8, 'thai tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(9, 'lemon tea', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(10, 'cappuccino', 50, 'หวานมาก\r\nหวานน้อย\r\nหวานปกติ\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(11, 'smoothie', 45, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(12, 'black coffee', 50, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(13, 'iced chocolate', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(14, 'hot chocolate', 35, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(15, 'black tea', 60, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(16, 'fruit tea', 60, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(17, 'herbal tea', 60, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(18, 'milkshake', 40, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(19, 'macchiato', 55, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L'),
-(20, 'orange juice', 45, 'หวานมาก\r\nหวานปกติ\r\nหวานน้อย\r\nไซต์ S\r\nไซต์ M\r\nไซต์ L');
+INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `image`) VALUES
+(1, 'cocoa', 40, 'cocoa.jpg'),
+(2, 'americano', 50, 'americano.jpg'),
+(3, 'mocha', 50, 'mocha.jpg'),
+(4, 'espresso', 50, 'espresso.jpg'),
+(5, 'latte', 50, 'latte.jpg'),
+(6, 'green tea', 40, 'green tea.jpeg'),
+(7, 'fresh milk', 40, 'freshmilk.jpg'),
+(8, 'thai tea', 40, 'thaitea.jpg'),
+(9, 'lemon tea', 40, 'lemtea.jpg'),
+(10, 'cappuccino', 50, 'cappuccino.jpg'),
+(11, 'smoothie', 45, 'smoothie.jpg'),
+(12, 'black coffee', 50, 'black coffee.jpg'),
+(13, 'iced chocolate', 40, 'icechock.png'),
+(14, 'hot chocolate', 35, 'hotchock.jpg'),
+(15, 'black tea', 60, 'blacktea.jpg'),
+(16, 'fruit tea', 60, 'fruit tea.jpg'),
+(17, 'herbal tea', 60, 'herbal tea.jpg'),
+(18, 'milkshake', 40, 'milkshake.jpg'),
+(19, 'macchiato', 55, 'macchiato.png'),
+(20, 'orange juice', 45, 'orange juice.jpg');
 
 -- --------------------------------------------------------
 
@@ -109,131 +99,57 @@ INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `ProductDetail`) VA
 
 CREATE TABLE `sales` (
   `SaleID` int(11) NOT NULL,
+  `CustomerName` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phonNo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `SaleDateTime` datetime NOT NULL,
-  `CustomerID` int(11) NOT NULL,
-  `StaffID` int(11) NOT NULL,
-  `GrandTotal` float NOT NULL
+  `Total` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sales`
 --
 
-INSERT INTO `sales` (`SaleID`, `SaleDateTime`, `CustomerID`, `StaffID`, `GrandTotal`) VALUES
-(1, '2020-04-14 10:00:00', 1113, 9991, 50),
-(2, '2020-04-14 11:00:00', 1114, 9992, 100),
-(3, '2020-04-14 11:21:00', 1115, 9991, 150),
-(4, '2020-04-14 12:00:00', 1111, 9995, 200),
-(5, '2020-04-14 13:00:00', 1112, 9993, 500),
-(6, '2020-04-14 14:00:00', 1116, 9993, 80),
-(7, '2020-04-15 15:00:00', 1120, 9995, 100),
-(8, '2020-04-14 16:00:00', 1119, 9993, 200),
-(9, '2020-04-15 11:00:00', 1118, 9991, 40),
-(10, '2020-04-15 12:00:00', 1117, 9992, 50),
-(11, '2020-04-15 13:00:00', 1115, 9993, 500),
-(12, '2020-04-15 12:00:00', 1114, 9991, 80),
-(13, '2020-04-15 12:26:00', 1113, 9992, 100),
-(14, '2020-04-15 13:00:00', 1117, 9995, 200),
-(15, '2020-04-15 14:00:00', 1119, 9994, 40),
-(16, '2020-04-16 11:21:00', 1117, 9991, 100),
-(17, '2020-04-16 13:00:00', 1118, 9992, 150),
-(18, '2020-04-16 14:00:00', 1113, 9993, 250),
-(19, '2020-04-16 15:00:00', 1116, 9994, 320),
-(20, '2020-04-16 16:00:00', 1111, 9995, 320),
-(21, '2020-04-17 10:05:00', 9996, 1121, 35),
-(22, '2020-04-17 11:00:00', 9997, 1122, 50),
-(23, '2020-04-17 12:03:00', 9998, 1123, 150),
-(24, '2020-04-17 12:18:00', 10000, 1124, 350),
-(25, '2020-04-17 13:06:00', 9991, 1125, 500),
-(26, '2020-04-15 15:09:00', 9992, 1126, 80),
-(27, '2020-04-15 15:52:00', 9999, 1127, 40);
+INSERT INTO `sales` (`SaleID`, `CustomerName`, `phonNo`, `SaleDateTime`, `Total`) VALUES
+(1, 'pang', '0986900241', '2020-04-25 12:00:00', 150),
+(2, 'yut', '0991236789', '2020-04-25 14:30:00', 465),
+(3, 'kung', '0981021614', '2020-04-25 16:00:00', 90),
+(4, 'ii', '861234567', '2020-04-26 11:30:00', 190);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sale_details`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `sale_details` (
-  `SaleDetailID` int(11) NOT NULL,
-  `SaleID` int(11) NOT NULL,
-  `ProductID` int(11) NOT NULL,
-  `Price` float NOT NULL,
-  `Quantity` int(11) NOT NULL,
-  `Amount` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `users` (
+  `ID` int(11) NOT NULL,
+  `FName` varchar(255) NOT NULL,
+  `LName` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `phonNo` int(12) NOT NULL,
+  `UserName` varchar(255) NOT NULL,
+  `Password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `sale_details`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `sale_details` (`SaleDetailID`, `SaleID`, `ProductID`, `Price`, `Quantity`, `Amount`) VALUES
-(331, 1, 2, 50, 1, 50),
-(332, 2, 3, 50, 2, 100),
-(333, 3, 4, 50, 3, 150),
-(334, 4, 1, 40, 5, 200),
-(335, 5, 5, 50, 10, 500),
-(336, 6, 6, 40, 2, 80),
-(338, 8, 9, 40, 5, 200),
-(339, 9, 9, 40, 1, 40),
-(340, 10, 3, 50, 1, 50),
-(341, 11, 2, 50, 10, 500),
-(342, 12, 1, 40, 2, 80),
-(343, 13, 4, 50, 2, 100),
-(344, 14, 6, 40, 5, 200),
-(345, 15, 1, 40, 1, 40),
-(346, 16, 5, 50, 2, 100),
-(347, 17, 4, 50, 3, 150),
-(348, 18, 2, 50, 5, 250),
-(349, 19, 9, 40, 6, 320),
-(350, 20, 8, 40, 6, 320),
-(351, 21, 14, 35, 1, 35),
-(352, 22, 12, 50, 1, 30),
-(354, 24, 12, 50, 7, 350),
-(355, 25, 12, 50, 10, 500),
-(356, 0, 0, 0, 0, 0),
-(357, 0, 0, 0, 0, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `staffs`
---
-
-CREATE TABLE `staffs` (
-  `StaffID` int(11) NOT NULL,
-  `StaffCode` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Gender` enum('M','F') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffPassword` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffLevel` enum('Staff','Manager','Admin') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `staffs`
---
-
-INSERT INTO `staffs` (`StaffID`, `StaffCode`, `StaffName`, `Gender`, `StaffPassword`, `StaffLevel`) VALUES
-(9991, 'yuwan1', 'yuwan', 'F', '1234', 'Staff'),
-(9992, 'non56', 'nonthawut', 'M', '1111', 'Manager'),
-(9993, 'mo13', 'monchanok', 'F', '2222', 'Admin'),
-(9994, 'ii456', 'yuttanun', 'M', '3333', 'Staff'),
-(9995, 'ron890', 'ronnarit', 'M', '4444', 'Staff'),
-(9996, 'jann12', 'janjaw', 'F', '0987', 'Staff'),
-(9997, 'nuy34', 'panida', 'F', '5678', 'Staff'),
-(9998, 'wi67', 'wiyada', 'F', '5555', 'Staff'),
-(9999, 'nii89', 'veniga', 'F', '6666', 'Staff'),
-(10000, 'yo890', 'yonthida', 'F', '7777', 'Staff');
+INSERT INTO `users` (`ID`, `FName`, `LName`, `Email`, `phonNo`, `UserName`, `Password`) VALUES
+(1, 'yuwan', 'yu', 'yuwan@gmail.com', 841111111, 'yuwan', '123456789'),
+(2, 'non', 'nonthawut', 'non@gmail.com', 941234567, 'non', '123456789'),
+(3, 'mo', 'monchanok', 'mo@gmail.com', 841234567, 'mo', '123456789'),
+(4, 'ii', 'yuttanun', 'ii@gmail.com', 861234567, 'ii', '123456789'),
+(5, 'ron', 'ronnarit', 'ron@gmail.com', 811234567, 'ron', '123456789'),
+(6, 'janjaw', 'jann', 'jann@gmail.com', 948123654, 'jann', '123456789'),
+(7, 'nuy', 'panida', 'nuy@gmail.com', 612345678, 'nuy', '123456789'),
+(8, 'wi', 'wiyada', 'wi@gmail.com', 812345678, 'wi', '123456789'),
+(9, 'ni', 'veniga', 'niI@gmail.com', 812345677, 'ni', '123456789'),
+(10, 'yo', 'yonthida', 'yo@gmail.com', 831234567, 'yo', '123456789');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `customers`
---
-ALTER TABLE `customers`
-  ADD PRIMARY KEY (`CustomerID`);
 
 --
 -- Indexes for table `products`
@@ -248,51 +164,32 @@ ALTER TABLE `sales`
   ADD PRIMARY KEY (`SaleID`);
 
 --
--- Indexes for table `sale_details`
+-- Indexes for table `users`
 --
-ALTER TABLE `sale_details`
-  ADD PRIMARY KEY (`SaleDetailID`);
-
---
--- Indexes for table `staffs`
---
-ALTER TABLE `staffs`
-  ADD PRIMARY KEY (`StaffID`),
-  ADD UNIQUE KEY `StaffCode` (`StaffCode`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `customers`
---
-ALTER TABLE `customers`
-  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1131;
-
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2227;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2230;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `sale_details`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `sale_details`
-  MODIFY `SaleDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=363;
-
---
--- AUTO_INCREMENT for table `staffs`
---
-ALTER TABLE `staffs`
-  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10001;
+ALTER TABLE `users`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

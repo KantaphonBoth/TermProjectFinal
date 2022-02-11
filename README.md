@@ -1,4 +1,1 @@
-# TermProjectFinal
-database system
-
-Coffee shop
+# Coffee shop Project
